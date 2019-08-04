@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://f.mayopy.com/"/>
-  <updated>2019-08-04T14:01:55.161Z</updated>
+  <updated>2019-08-04T15:42:13.064Z</updated>
   <id>http://f.mayopy.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>图解经济学-07-市场和福利</title>
+    <link href="http://f.mayopy.com/2019/08/04/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6-07-%E5%B8%82%E5%9C%BA%E5%92%8C%E7%A6%8F%E5%88%A9/"/>
+    <id>http://f.mayopy.com/2019/08/04/图解经济学-07-市场和福利/</id>
+    <published>2019-08-04T15:26:57.000Z</published>
+    <updated>2019-08-04T15:42:13.064Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-消费者剩余"><a href="#1-消费者剩余" class="headerlink" title="1. 消费者剩余"></a><strong>1. 消费者剩余</strong></h2><p>消费者剩余是买者愿意为一种物品支付的量减去其为此实际支付的量。例如一件物品，你原本打算花100块买这件物品，但是最后你只花了90块，那10块钱就是消费者剩余。</p><p>买者总希望能以最低的价格买到他们想要的物品。因而价格的降低使得买者得到的经济福利增加了。</p><h2 id="2-生产者剩余"><a href="#2-生产者剩余" class="headerlink" title="2. 生产者剩余"></a><strong>2. 生产者剩余</strong></h2><p>生产者剩余是卖者卖出的物品得到的收益减去其成本。只有在竞争市场中才存在生产者剩余。</p><p>卖者总希望把物品卖个好价钱，以得到更多的生产者剩余</p><h2 id="3-总剩余"><a href="#3-总剩余" class="headerlink" title="3. 总剩余"></a><strong>3. 总剩余</strong></h2><p>衡量社会经济福利的一个指标是消费者剩余加上生产者剩余，它们的总和就是总剩余。</p><p>如果说，市场是买卖双方参与制作和分割的一块蛋糕，那么效率指的是如何把这块蛋糕做大做厚，而公平则是指如何公正地切割蛋糕。</p><h2 id="4-关于完全竞争市场"><a href="#4-关于完全竞争市场" class="headerlink" title="4. 关于完全竞争市场"></a><strong>4. 关于完全竞争市场</strong></h2><p>生产者和消费者共同决定着市场的价格。只有当消费者对物品的评价高于价格时，消费者才愿意掏钱购买物品；否则，就不买。只有在成本低于市场价格时，生产者才会销售物品。</p><p>当买者的评价高于卖者的成本时，整个社会增加产量能使总剩余增加；当买者的评价低于卖者的成本时，减少产量能增加社会总剩余。只有在供给和需求处于均衡位置时，买者的评价和卖者的成本刚好相等，此时，整个社会的总剩余也是最大的。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;1-消费者剩余&quot;&gt;&lt;a href=&quot;#1-消费者剩余&quot; class=&quot;headerlink&quot; title=&quot;1. 消费者剩余&quot;&gt;&lt;/a&gt;&lt;strong&gt;1. 消费者剩余&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;消费者剩余是买者愿意为一种物品支付的量减去其为此实际支付的量。
+      
+    
+    </summary>
+    
+      <category term="图解经济学" scheme="http://f.mayopy.com/categories/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+    
+    
+      <category term="经济学" scheme="http://f.mayopy.com/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>音乐游戏开发之从 midi 文件中提取重音点</title>
