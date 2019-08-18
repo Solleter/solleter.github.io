@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://f.mayopy.com/about/index.html</loc>
+    
+    <lastmod>2019-08-18T14:05:37.597Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://f.mayopy.com/2019/08/18/%E5%9C%A8%E6%B8%B8%E6%88%8F%E5%85%AC%E5%8F%B8%E5%B7%A5%E4%BD%9C-02-%E4%BA%BA%E5%91%98%E6%9E%B6%E6%9E%84/</loc>
     
     <lastmod>2019-08-18T13:41:20.960Z</lastmod>
@@ -54,13 +61,6 @@
     <loc>http://f.mayopy.com/2019/07/22/Unity3D-%E4%BD%BF%E7%94%A8%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF%E6%8E%A7%E5%88%B6%E7%89%A9%E4%BD%93%E6%8A%9B%E7%89%A9%E7%BA%BF%E7%A7%BB%E5%8A%A8/</loc>
     
     <lastmod>2019-08-04T14:00:31.112Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://f.mayopy.com/about/index.html</loc>
-    
-    <lastmod>2019-08-04T00:15:10.406Z</lastmod>
     
   </url>
   
