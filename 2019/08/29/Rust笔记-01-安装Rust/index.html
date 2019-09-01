@@ -1,0 +1,57 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.9.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="日常记录"><title>Rust笔记-01-安装Rust | F社</title><link rel="stylesheet" type="text/css" href="/css/normalize.css"><link rel="stylesheet" type="text/css" href="/css/highlight.css"><link rel="stylesheet" type="text/css" href="/css/font.css"><link rel="stylesheet" type="text/css" href="/css/noise.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><article class="wrapper"><div class="post-main"><div class="nav"><nav class="container"><a class="sidebar-nav-item active" href="/">主页</a><a class="sidebar-nav-item" href="/archives">分类归档</a><a class="sidebar-nav-item" href="/about">关于</a><a class="sidebar-nav-item" href="/links">收集</a></nav><div class="container post-meta"><div class="post-tags"><a class="post-tag-link" href="/tags/rust/">rust</a></div><div class="post-time">2019-08-29</div></div></div><div class="container post-header"><h1>Rust笔记-01-安装Rust</h1></div><div class="container post-content"><p>关于Rust的介绍，这里不再描述什么，网络上已经有很多信息了，这里，我们直接开始。</p>
+<blockquote>
+<p>关于是否应该学习Rust，这个没有标准答案，对于我来说，主要是想在编译型系统级语言上有点积累，因为我对C++只是了解，大概能看懂，远没达到熟练码代码的层次，但是我又不想学习C++，所以就选择了Rust。</p>
+</blockquote>
+<h4 id="在安装之前，有几个东西要大概明白"><a href="#在安装之前，有几个东西要大概明白" class="headerlink" title="在安装之前，有几个东西要大概明白"></a>在安装之前，有几个东西要大概明白</h4><ul>
+<li><code>Rustup</code> 是用来安装、更新、管理 Rust 不同平台版本的东西</li>
+<li><code>Rust</code> 版本有 <code>Stable</code>，<code>Nightly</code>，一些新特性一般会在 Nightly 版本里，稳定了后官方可能会加到Stable里，一般情况我们使用Stable版本就可以</li>
+<li><code>toolchain</code> 这里我们简单地理解为某个Rust版本就行</li>
+<li>在 Windows 上，会发现即使 Stable 版本，也会有 <code>gnu</code> 和 <code>msvc</code> 两种版本，目前使用哪种都行，默认在windows上使用的是msvc，这里保持默认就行</li>
+<li><code>cargo</code> 用于组织Rust项目项目，例如创建项目，构建项目，测试项目等。</li>
+</ul>
+<h2 id="下载和安装-Rustup"><a href="#下载和安装-Rustup" class="headerlink" title="下载和安装 Rustup"></a>下载和安装 Rustup</h2><p>访问 <a href="https://www.rust-lang.org/zh-CN/tools/install" target="_blank" rel="noopener"><code>https://www.rust-lang.org/zh-CN/tools/install</code></a>，如果是在Windows系统下，那就下载 <code>RUSTUP-INIT.EXE</code>，如果是OSX或者Linux等，就使用它的脚本下载 <code>curl https://sh.rustup.rs -sSf | sh</code></p>
+<h2 id="安装-Rust"><a href="#安装-Rust" class="headerlink" title="安装 Rust"></a>安装 Rust</h2><p>下载好 <code>rustup</code> 后就运行，osx或linux下应该会自动运行，运行后会出现下面的界面<br><img src="https://i.loli.net/2019/08/30/W2LFYi1ZNoEHnal.png" alt="1.png"><br>这里保持默认就好，输入 <code>1</code> 然后按回车，进行安装。这里可以看到默认安装的是 <code>stable msvc</code> 版本的 <code>rust</code>。这里会自动下载，安装，然后设置。</p>
+<p><img src="https://i.loli.net/2019/08/30/WZ8KIkOVRn7QBMq.png" alt="2.png"><br>到这里，看到这个界面，就表示已经下载和安装好，可以使用了。</p>
+<h2 id="查看及修改配置"><a href="#查看及修改配置" class="headerlink" title="查看及修改配置"></a>查看及修改配置</h2><ol>
+<li><code>rustc --version</code> 查看 rustc 版本</li>
+<li><code>cargo --version</code> 查看 cargo 版本</li>
+<li><code>rustup toolchain list</code> 列出当前已经安装的 rust 版本, (default) 为当前使用的版本</li>
+<li><code>rustup default stable-x86_64-pc-windows-msvc</code><br> 设置使用 stable msvc 版本的 rust (可以简写为 stable-msvc)</li>
+<li><code>rustup default stable-x86_64-pc-windows-gnu</code><br> 设置使用 stable gnu 版本的 rust (可以简写为 stable-gnu)</li>
+</ol>
+<h4 id="下一篇开始使用-cargo-创建工程，开始写代码"><a href="#下一篇开始使用-cargo-创建工程，开始写代码" class="headerlink" title="下一篇开始使用 cargo 创建工程，开始写代码"></a>下一篇开始使用 <code>cargo</code> 创建工程，开始写代码</h4></div></div><script type="text/x-mathjax-config">
+   MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    }); 
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><div class="post-main post-comment"><div id="disqus_thread"></div><script type="text/javascript">
+var disqus_shortname = 'sexy-game-boy';
+var disqus_identifier = '2019/08/29/Rust笔记-01-安装Rust/';
+var disqus_title = 'Rust笔记-01-安装Rust';
+var disqus_url = 'https://solleter.me/2019/08/29/Rust笔记-01-安装Rust/';
+(function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">Blog comments powered by <span class="logo-disqus">Disqus</span></a></div></article><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.css"><script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script><script src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script>$(document).ready(function() {
+  $(".fancybox").fancybox();
+});
+</script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+e.src='//www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+ga('create','UA-140200191-1');ga('send','pageview');</script></body></html>

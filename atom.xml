@@ -2,12 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>F社</title>
   
-  <subtitle>还没想好子标题</subtitle>
+  <subtitle>上你娘的班</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://f.mayopy.com/"/>
-  <updated>2019-08-18T13:41:20.960Z</updated>
-  <id>http://f.mayopy.com/</id>
+  <link href="https://solleter.me/"/>
+  <updated>2019-09-01T01:21:07.213Z</updated>
+  <id>https://solleter.me/</id>
   
   <author>
     <name>F君</name>
@@ -17,11 +17,64 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Rust笔记-01-安装Rust</title>
+    <link href="https://solleter.me/2019/08/29/Rust%E7%AC%94%E8%AE%B0-01-%E5%AE%89%E8%A3%85Rust/"/>
+    <id>https://solleter.me/2019/08/29/Rust笔记-01-安装Rust/</id>
+    <published>2019-08-29T11:06:52.000Z</published>
+    <updated>2019-09-01T01:21:07.213Z</updated>
+    
+    <content type="html"><![CDATA[<p>关于Rust的介绍，这里不再描述什么，网络上已经有很多信息了，这里，我们直接开始。</p><blockquote><p>关于是否应该学习Rust，这个没有标准答案，对于我来说，主要是想在编译型系统级语言上有点积累，因为我对C++只是了解，大概能看懂，远没达到熟练码代码的层次，但是我又不想学习C++，所以就选择了Rust。</p></blockquote><h4 id="在安装之前，有几个东西要大概明白"><a href="#在安装之前，有几个东西要大概明白" class="headerlink" title="在安装之前，有几个东西要大概明白"></a>在安装之前，有几个东西要大概明白</h4><ul><li><code>Rustup</code> 是用来安装、更新、管理 Rust 不同平台版本的东西</li><li><code>Rust</code> 版本有 <code>Stable</code>，<code>Nightly</code>，一些新特性一般会在 Nightly 版本里，稳定了后官方可能会加到Stable里，一般情况我们使用Stable版本就可以</li><li><code>toolchain</code> 这里我们简单地理解为某个Rust版本就行</li><li>在 Windows 上，会发现即使 Stable 版本，也会有 <code>gnu</code> 和 <code>msvc</code> 两种版本，目前使用哪种都行，默认在windows上使用的是msvc，这里保持默认就行</li><li><code>cargo</code> 用于组织Rust项目项目，例如创建项目，构建项目，测试项目等。</li></ul><h2 id="下载和安装-Rustup"><a href="#下载和安装-Rustup" class="headerlink" title="下载和安装 Rustup"></a>下载和安装 Rustup</h2><p>访问 <a href="https://www.rust-lang.org/zh-CN/tools/install" target="_blank" rel="noopener"><code>https://www.rust-lang.org/zh-CN/tools/install</code></a>，如果是在Windows系统下，那就下载 <code>RUSTUP-INIT.EXE</code>，如果是OSX或者Linux等，就使用它的脚本下载 <code>curl https://sh.rustup.rs -sSf | sh</code></p><h2 id="安装-Rust"><a href="#安装-Rust" class="headerlink" title="安装 Rust"></a>安装 Rust</h2><p>下载好 <code>rustup</code> 后就运行，osx或linux下应该会自动运行，运行后会出现下面的界面<br><img src="https://i.loli.net/2019/08/30/W2LFYi1ZNoEHnal.png" alt="1.png"><br>这里保持默认就好，输入 <code>1</code> 然后按回车，进行安装。这里可以看到默认安装的是 <code>stable msvc</code> 版本的 <code>rust</code>。这里会自动下载，安装，然后设置。</p><p><img src="https://i.loli.net/2019/08/30/WZ8KIkOVRn7QBMq.png" alt="2.png"><br>到这里，看到这个界面，就表示已经下载和安装好，可以使用了。</p><h2 id="查看及修改配置"><a href="#查看及修改配置" class="headerlink" title="查看及修改配置"></a>查看及修改配置</h2><ol><li><code>rustc --version</code> 查看 rustc 版本</li><li><code>cargo --version</code> 查看 cargo 版本</li><li><code>rustup toolchain list</code> 列出当前已经安装的 rust 版本, (default) 为当前使用的版本</li><li><code>rustup default stable-x86_64-pc-windows-msvc</code><br> 设置使用 stable msvc 版本的 rust (可以简写为 stable-msvc)</li><li><code>rustup default stable-x86_64-pc-windows-gnu</code><br> 设置使用 stable gnu 版本的 rust (可以简写为 stable-gnu)</li></ol><h4 id="下一篇开始使用-cargo-创建工程，开始写代码"><a href="#下一篇开始使用-cargo-创建工程，开始写代码" class="headerlink" title="下一篇开始使用 cargo 创建工程，开始写代码"></a>下一篇开始使用 <code>cargo</code> 创建工程，开始写代码</h4>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;关于Rust的介绍，这里不再描述什么，网络上已经有很多信息了，这里，我们直接开始。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;关于是否应该学习Rust，这个没有标准答案，对于我来说，主要是想在编译型系统级语言上有点积累，因为我对C++只是了解，大概能看懂，远没达到熟练码代码的
+      
+    
+    </summary>
+    
+      <category term="Rust 基础学习" scheme="https://solleter.me/categories/Rust-%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="rust" scheme="https://solleter.me/tags/rust/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>聊聊游戏开发中的逻辑层框架模块</title>
+    <link href="https://solleter.me/2019/08/26/%E8%81%8A%E8%81%8A%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E9%80%BB%E8%BE%91%E5%B1%82%E6%A1%86%E6%9E%B6%E6%A8%A1%E5%9D%97/"/>
+    <id>https://solleter.me/2019/08/26/聊聊游戏开发中的逻辑层框架模块/</id>
+    <published>2019-08-26T15:28:12.000Z</published>
+    <updated>2019-09-01T01:21:07.225Z</updated>
+    
+    <content type="html"><![CDATA[<p>不管是端游还是手游，在游戏引擎提供的基本支持之上，一个项目，通常还是需要自己的逻辑层框架。今天，我们就聊一聊一个游戏项目基本的逻辑层框架组成部。这里以Unity3D引擎为例，但不限于Unity3D引擎。</p><h4 id="资源管理"><a href="#资源管理" class="headerlink" title="资源管理"></a>资源管理</h4><blockquote><p>一个项目开始，最好就规划好资源目录。随着项目的开发，资源会越来越多，越往后，越难整理，而且需要耗费大量时间和精力，所以建议随着项目的开发，就不断地做好资源规划和整理的工作。</p></blockquote><h4 id="编辑器阶段"><a href="#编辑器阶段" class="headerlink" title="编辑器阶段"></a>编辑器阶段</h4><blockquote><ol><li><strong>资源打包模块</strong><br> 对于Unity3D来说，主要是打包 AssetBundle<br> <br></li><li><strong>配置表导出模块</strong><br> 很多游戏的大量配置，使用excel的形式，所以必然需要一个工具能够将excel表结构，转为代码，并且把表数据，导出到游戏运行时能够解析的格式，例如二进制。还可以自动生成运行时加载解析代码。<br> <br></li><li><strong>协议导出模块</strong><br> 很多游戏使用了google的 FlatBuffers 或者 Protocol Buffers，这里需要一个工具自动化地将协议文件导出成客户端和服务器使用的代码文件。</li></ol></blockquote><h3 id="运行时阶段"><a href="#运行时阶段" class="headerlink" title="运行时阶段"></a>运行时阶段</h3><blockquote><ol><li><strong>更新模块</strong><br> 这个模块主要是根据项目自定义的版本信息，从网络上自动下载需要更新的资源文件，以及代码文件，这里通常使用lua，然后解压到资源目录。这里面涉及到两个重要的东西，一个是版本和资源文件的定义，一个是HTTP请求模块。对于Unity3D，通常使用 UnityWebRequest<br><br></li><li><strong>网络通信模块</strong><br> TCP 或者 UDP，用于客户端和服务器的逻辑通信。收发包数据，根据协议号处理协议，具体处理函数为业务逻辑。<br> <br></li><li><strong>UI管理器</strong><br> 如果是MVC结构，定义好UI面板的基类，各UI类继承基类。UI分层，普通UI面板层，弹出式面板层，Loading层，特效层，等等，具体根据项目需求灵活定义。<br> <br></li><li><strong>事件系统</strong><br> 用于整个工程的业务逻辑之间通信。不过事件这种东西，有一个不好处就是有时候调试起来不是很直接，有时候难以确定是从哪里发来的事件，有弊有利。<br> <br></li><li><strong>代码热更新模块</strong><br> 现在比较常用的解决方案是 lua，虽然写起来比较蛋疼，但是很多项目都这样用，也许是因为没有更好的解决方案，也许是因为技术决策者的经验之谈，这里就呵呵了。<br> <br></li><li><strong>原生交互模块</strong><br> 对于手游，通常分为Android和iOS版本，不同的版本有一些地方需要和原生系统交互，例如将游戏截图保存到相册，这样就需要调用原生系统的API。一些SDK的接入相关的东西，也可以归于这个模块。<br> <br></li><li><strong>一些小的工具类集合</strong><br> <br></li><li><strong>配置表加载解析模块</strong><br> 就是将编辑器阶段打包好的配置表数据，在这里读出来，存起来，用于游戏业务逻辑使用<br> <br></li><li><strong>数据读写模块</strong><br> 有时候需要将一些数据写到本地，对于不同的平台，Android，iOS，PC，存储的路径不同，这个模块会将这些都封装好，上层业务只管用就行，不需要关心路径问题。<br> <br></li><li><strong>音频模块</strong><br>游戏内音频播放及管理，例如同一音源，最多有多少个的控制，等等<br><br></li><li><strong>日志模块</strong><br>日志的打印，各平台写入文件，设备上在屏幕上显示下隐藏，等等</li></ol></blockquote><h4 id="暂时先写这么多，后面不断补充"><a href="#暂时先写这么多，后面不断补充" class="headerlink" title="暂时先写这么多，后面不断补充 :)"></a>暂时先写这么多，后面不断补充 :)</h4>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;不管是端游还是手游，在游戏引擎提供的基本支持之上，一个项目，通常还是需要自己的逻辑层框架。今天，我们就聊一聊一个游戏项目基本的逻辑层框架组成部。这里以Unity3D引擎为例，但不限于Unity3D引擎。&lt;/p&gt;
+&lt;h4 id=&quot;资源管理&quot;&gt;&lt;a href=&quot;#资源管理&quot; c
+      
+    
+    </summary>
+    
+    
+      <category term="游戏开发" scheme="https://solleter.me/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="Unity3D" scheme="https://solleter.me/tags/Unity3D/"/>
+    
+  </entry>
+  
+  <entry>
     <title>在游戏公司工作-02-人员架构</title>
-    <link href="http://f.mayopy.com/2019/08/18/%E5%9C%A8%E6%B8%B8%E6%88%8F%E5%85%AC%E5%8F%B8%E5%B7%A5%E4%BD%9C-02-%E4%BA%BA%E5%91%98%E6%9E%B6%E6%9E%84/"/>
-    <id>http://f.mayopy.com/2019/08/18/在游戏公司工作-02-人员架构/</id>
+    <link href="https://solleter.me/2019/08/18/%E5%9C%A8%E6%B8%B8%E6%88%8F%E5%85%AC%E5%8F%B8%E5%B7%A5%E4%BD%9C-02-%E4%BA%BA%E5%91%98%E6%9E%B6%E6%9E%84/"/>
+    <id>https://solleter.me/2019/08/18/在游戏公司工作-02-人员架构/</id>
     <published>2019-08-17T16:17:52.000Z</published>
-    <updated>2019-08-18T13:41:20.960Z</updated>
+    <updated>2019-09-01T01:21:07.225Z</updated>
     
     <content type="html"><![CDATA[<p>这一篇博客来聊一下一个游戏公司的人员架构，以及不同职位大概做的事情。</p><blockquote><p>这里要说明的一点是，每一个游戏公司的人员架构可能都不一样，并没有严格的标准，以及一些事情应该哪个职位的人去做，也没有什么精确的标准，每一个公司都是根据实际情况灵活调整。有的公司可能有更多的职位分类，有的公司，可能也没有分的这么细，这里不必过于纠结。</p></blockquote><p><strong>先来看一张某游戏公司的人员架构图</strong></p><p><img src="https://i.loli.net/2019/08/18/oK1gYPnZN9jAzSf.png" alt="1.png"></p><p>接下来，我们将按照上面的这张图有架构，来逐一介绍每一个职位，以及做的事情，这里只做简要说明。</p><h2 id="总裁办"><a href="#总裁办" class="headerlink" title="总裁办"></a>总裁办</h2><h4 id="1-CEO"><a href="#1-CEO" class="headerlink" title="1. CEO"></a>1. CEO</h4><blockquote><p>这个貌似没什么可说的</p></blockquote><h4 id="2-PM"><a href="#2-PM" class="headerlink" title="2. PM"></a>2. PM</h4><blockquote><p>产品经理，负责整个产品的研发进度跟进，人员工作内容上的协调，任务分配等，这里的任务分配不是PM自己决定哪个任务分给谁做，而是与开发，美术交流，了解谁做哪一个模块，然后将任务和时间排到任务系统里。主要任务是时间分配与项目跟进。确保整个产品各个版本在计划的时间节点完成。</p></blockquote><h4 id="3-人事行政"><a href="#3-人事行政" class="headerlink" title="3. 人事行政"></a>3. 人事行政</h4><blockquote><p>人事主要负责员工的入职，离职。行政负责</p></blockquote><h4 id="4-财务"><a href="#4-财务" class="headerlink" title="4. 财务"></a>4. 财务</h4><blockquote><p>给大家发工资</p></blockquote><h2 id="策划部"><a href="#策划部" class="headerlink" title="策划部"></a>策划部</h2><h4 id="1-策划总监"><a href="#1-策划总监" class="headerlink" title="1. 策划总监"></a>1. 策划总监</h4><blockquote><p>每一个设计最终都会过一遍策划总监，貌似是最终拍板的那个人</p></blockquote><h4 id="2-系统策划"><a href="#2-系统策划" class="headerlink" title="2. 系统策划"></a>2. 系统策划</h4><blockquote><p>游戏中的各个系统，例如地图，背包，邮件，等等</p></blockquote><h4 id="3-关卡策划"><a href="#3-关卡策划" class="headerlink" title="3. 关卡策划"></a>3. 关卡策划</h4><blockquote><p>具体的玩法</p></blockquote><h4 id="4-剧情策划"><a href="#4-剧情策划" class="headerlink" title="4. 剧情策划"></a>4. 剧情策划</h4><blockquote><p>游戏中的剧情设计，文案等</p></blockquote><h4 id="5-数值策划"><a href="#5-数值策划" class="headerlink" title="5. 数值策划"></a>5. 数值策划</h4><blockquote><p>整个游戏中的数值系统</p></blockquote><h2 id="美术部"><a href="#美术部" class="headerlink" title="美术部"></a>美术部</h2><h4 id="1-艺术创意总监"><a href="#1-艺术创意总监" class="headerlink" title="1. 艺术创意总监"></a>1. 艺术创意总监</h4><blockquote><p>游戏的美术风格把控</p></blockquote><h4 id="2-主美"><a href="#2-主美" class="headerlink" title="2. 主美"></a>2. 主美</h4><blockquote><p>游戏部分各部分美术的负责人，以及协调整个美术部的工作</p></blockquote><h4 id="3-UE-UI"><a href="#3-UE-UI" class="headerlink" title="3. UE/UI"></a>3. UE/UI</h4><blockquote><p>UI及交互设计</p></blockquote><h4 id="4-原画"><a href="#4-原画" class="headerlink" title="4. 原画"></a>4. 原画</h4><blockquote><p>设计及画出游戏中的场景，角色等</p></blockquote><h4 id="5-3D"><a href="#5-3D" class="headerlink" title="5. 3D"></a>5. 3D</h4><blockquote><p>将原画的设计，进行3D建模，最终放到游戏中使用</p></blockquote><h4 id="6-动作"><a href="#6-动作" class="headerlink" title="6. 动作"></a>6. 动作</h4><blockquote><p>游戏中所有的动画制作，例如角色的，场景的等等</p></blockquote><h4 id="7-特效"><a href="#7-特效" class="headerlink" title="7. 特效"></a>7. 特效</h4><blockquote><p>游戏中的特效设计，包括场景中，及UI上的特效，UI上很多动画效果，也都是特效这个人做</p></blockquote><h2 id="程序部"><a href="#程序部" class="headerlink" title="程序部"></a>程序部</h2><h4 id="1-CTO"><a href="#1-CTO" class="headerlink" title="1. CTO"></a>1. CTO</h4><blockquote><p>整个公司的首席技术官，有的公司的CTO是不写代码的，主要是把控产品的技术方向，但是我们公司的CTO，是程序这边最辛苦的，每天都在写代码，晚上走的最晚，早上基本上来的比较早。有时候写客户端渲染方面的代码，有时候写服务器的模块。</p></blockquote><h4 id="2-主程-包括服务器主程和客户端主程"><a href="#2-主程-包括服务器主程和客户端主程" class="headerlink" title="2. 主程(包括服务器主程和客户端主程)"></a>2. 主程(包括服务器主程和客户端主程)</h4><blockquote><p>把控工程的框架层面的东西，也会做一些业务模块。</p></blockquote><h4 id="3-程序-包括服务器程序和客户端程序"><a href="#3-程序-包括服务器程序和客户端程序" class="headerlink" title="3. 程序(包括服务器程序和客户端程序)"></a>3. 程序(包括服务器程序和客户端程序)</h4><blockquote><p>主要是实现各个业务模块</p></blockquote><h4 id="4-测试"><a href="#4-测试" class="headerlink" title="4. 测试"></a>4. 测试</h4><blockquote><p>负责产品测试，提Bug，验证Bug</p></blockquote><h2 id="音频部"><a href="#音频部" class="headerlink" title="音频部"></a>音频部</h2><blockquote><p>游戏中的所有音频制作</p></blockquote><h2 id="商务部"><a href="#商务部" class="headerlink" title="商务部"></a>商务部</h2><blockquote><p>项目推广方面的事情吧，细节不是很了解。</p></blockquote><p><strong>再次说明一下，每一个游戏公司的情况都是不一样的，所以大概了解一下就OK，不要太认真。</strong></p>]]></content>
     
@@ -36,19 +89,19 @@
     
     </summary>
     
-      <category term="在游戏公司工作" scheme="http://f.mayopy.com/categories/%E5%9C%A8%E6%B8%B8%E6%88%8F%E5%85%AC%E5%8F%B8%E5%B7%A5%E4%BD%9C/"/>
+      <category term="在游戏公司工作" scheme="https://solleter.me/categories/%E5%9C%A8%E6%B8%B8%E6%88%8F%E5%85%AC%E5%8F%B8%E5%B7%A5%E4%BD%9C/"/>
     
     
-      <category term="工作" scheme="http://f.mayopy.com/tags/%E5%B7%A5%E4%BD%9C/"/>
+      <category term="工作" scheme="https://solleter.me/tags/%E5%B7%A5%E4%BD%9C/"/>
     
   </entry>
   
   <entry>
     <title>在游戏公司工作-01-体验</title>
-    <link href="http://f.mayopy.com/2019/08/16/%E5%9C%A8%E6%B8%B8%E6%88%8F%E5%85%AC%E5%8F%B8%E5%B7%A5%E4%BD%9C-01-%E4%BD%93%E9%AA%8C/"/>
-    <id>http://f.mayopy.com/2019/08/16/在游戏公司工作-01-体验/</id>
+    <link href="https://solleter.me/2019/08/16/%E5%9C%A8%E6%B8%B8%E6%88%8F%E5%85%AC%E5%8F%B8%E5%B7%A5%E4%BD%9C-01-%E4%BD%93%E9%AA%8C/"/>
+    <id>https://solleter.me/2019/08/16/在游戏公司工作-01-体验/</id>
     <published>2019-08-16T15:58:27.000Z</published>
-    <updated>2019-08-16T16:44:52.684Z</updated>
+    <updated>2019-09-01T01:21:07.223Z</updated>
     
     <content type="html"><![CDATA[<p>我在一家不是很大也不是很小的游戏公司，做游戏开发工作，具体职位是客户端开发，这篇博客不对职位具体的内容做详解，后期会有一篇博客专门描述。</p><p>这里聊一下工作时间。每天9点~10点上班，弹性制，下班时间为18点~19点，也就是说，9点到公司，晚上18点就可以下班走，10点到公司，那就要19点才能下班打卡。但是一般在公司待的时间，都会大于9个小时。工作时间是按8个小时算的，中午12点~13点为休息吃饭时间，所以加起来就是9个小时。</p><p>有一些公司严格按照打卡时间来考勤，我们公司并没有很严格，即使10点以后到，晚个十几分钟，也没关系，下班时间自己顺延就OK，很人性化。</p><p>再说一下加班情况。首先有一条原则是这样的，所有的一切，都是为了把当前的游戏，或者说每个人负责的工作，保质保量地完成，只要这一条达到了，其他的一切，都没有硬性规定。就我们公司而言，不忙的时候，基本上不会从规定上要求大家加班，只有临近版本节点状态，才会有一定的要求。例如我们现阶段临近出下一个版本，所以最近两个月大家周六是上班的。有特别事情也可以说一下，就不用去公司了，只要自己负责的事情在规定的时间内做好就OK。过去这段时间，就会恢复双休。</p><p>平时没有要求加班到几点几点，也都是各自按自己的节奏来，有的人感觉今天很疲惫，那可能就会早点走。有的人工作量有点多，可能就会多忙一会，有的人也会在公司里看点工作之外的东西，或者玩会游戏，并不是待在公司里，就一定是在加班或者工作。</p><p>我很喜欢我们公司的一点就是，没有人会盯着你是不是在工作，是不是在磨洋工。也可能这批员工都很不错，每个人都有明确的任务，大家对自己的工作都很上心，所以每个人都尽可能地在规划时间内完成。</p><p><strong>整体来说，工作氛围和方式，是很舒心的。</strong></p><p>再来聊一下工作模式。PM会先把下一个版本要开发的内容都规划好，然后具体到哪一个人做，然后会和每一个人对一下时间，每一个功能模块，需要要多长时间。一般是按周来算的。有一些小的功能，不需要很长的时间，也会并行开发。</p><p>很多人工作的时候是戴着耳机听着音乐的，那些不允许戴耳机的公司，可能不是正宗的IT公司。有些人可能好奇，戴着耳机工作不会分心吗？其实，并不会，反而会让人更加专注，至少我是这样。音乐会屏蔽掉周围的一些噪音，当专注点进入工作内容后，音乐放的是什么，已经不那么重要，那个时间大脑已经没有在关注音乐。</p><p>还有一点很重要，公司的整个人员架构是扁平化的，没有任何政治斗争，大家都是干活的，也没有传统企业那些各种各样的头衔。和同事，和CTO，CEO聊东西，没有任何区别，他们没有任何上级的架子。不像某些传统企业，见到哪怕比自己稍大一点职位的人，很多人都会恭恭敬敬的奉献虚伪。这里找不到合适的描述，大家自己体会。</p><p>这篇文章先写到这里，想到更多的再补充。如果有幸被某些读者看到，有任何想问的，欢迎在下面留言。</p><p>晚安，北京。</p>]]></content>
     
@@ -62,19 +115,19 @@
     
     </summary>
     
-      <category term="在游戏公司工作" scheme="http://f.mayopy.com/categories/%E5%9C%A8%E6%B8%B8%E6%88%8F%E5%85%AC%E5%8F%B8%E5%B7%A5%E4%BD%9C/"/>
+      <category term="在游戏公司工作" scheme="https://solleter.me/categories/%E5%9C%A8%E6%B8%B8%E6%88%8F%E5%85%AC%E5%8F%B8%E5%B7%A5%E4%BD%9C/"/>
     
     
-      <category term="工作" scheme="http://f.mayopy.com/tags/%E5%B7%A5%E4%BD%9C/"/>
+      <category term="工作" scheme="https://solleter.me/tags/%E5%B7%A5%E4%BD%9C/"/>
     
   </entry>
   
   <entry>
     <title>图解经济学-07-市场和福利</title>
-    <link href="http://f.mayopy.com/2019/08/04/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6-07-%E5%B8%82%E5%9C%BA%E5%92%8C%E7%A6%8F%E5%88%A9/"/>
-    <id>http://f.mayopy.com/2019/08/04/图解经济学-07-市场和福利/</id>
+    <link href="https://solleter.me/2019/08/04/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6-07-%E5%B8%82%E5%9C%BA%E5%92%8C%E7%A6%8F%E5%88%A9/"/>
+    <id>https://solleter.me/2019/08/04/图解经济学-07-市场和福利/</id>
     <published>2019-08-04T15:26:57.000Z</published>
-    <updated>2019-08-04T15:42:13.064Z</updated>
+    <updated>2019-09-01T01:21:07.223Z</updated>
     
     <content type="html"><![CDATA[<h2 id="1-消费者剩余"><a href="#1-消费者剩余" class="headerlink" title="1. 消费者剩余"></a><strong>1. 消费者剩余</strong></h2><p>消费者剩余是买者愿意为一种物品支付的量减去其为此实际支付的量。例如一件物品，你原本打算花100块买这件物品，但是最后你只花了90块，那10块钱就是消费者剩余。</p><p>买者总希望能以最低的价格买到他们想要的物品。因而价格的降低使得买者得到的经济福利增加了。</p><h2 id="2-生产者剩余"><a href="#2-生产者剩余" class="headerlink" title="2. 生产者剩余"></a><strong>2. 生产者剩余</strong></h2><p>生产者剩余是卖者卖出的物品得到的收益减去其成本。只有在竞争市场中才存在生产者剩余。</p><p>卖者总希望把物品卖个好价钱，以得到更多的生产者剩余</p><h2 id="3-总剩余"><a href="#3-总剩余" class="headerlink" title="3. 总剩余"></a><strong>3. 总剩余</strong></h2><p>衡量社会经济福利的一个指标是消费者剩余加上生产者剩余，它们的总和就是总剩余。</p><p>如果说，市场是买卖双方参与制作和分割的一块蛋糕，那么效率指的是如何把这块蛋糕做大做厚，而公平则是指如何公正地切割蛋糕。</p><h2 id="4-关于完全竞争市场"><a href="#4-关于完全竞争市场" class="headerlink" title="4. 关于完全竞争市场"></a><strong>4. 关于完全竞争市场</strong></h2><p>生产者和消费者共同决定着市场的价格。只有当消费者对物品的评价高于价格时，消费者才愿意掏钱购买物品；否则，就不买。只有在成本低于市场价格时，生产者才会销售物品。</p><p>当买者的评价高于卖者的成本时，整个社会增加产量能使总剩余增加；当买者的评价低于卖者的成本时，减少产量能增加社会总剩余。只有在供给和需求处于均衡位置时，买者的评价和卖者的成本刚好相等，此时，整个社会的总剩余也是最大的。</p>]]></content>
     
@@ -87,19 +140,19 @@
     
     </summary>
     
-      <category term="图解经济学" scheme="http://f.mayopy.com/categories/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+      <category term="图解经济学" scheme="https://solleter.me/categories/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
     
-      <category term="经济学" scheme="http://f.mayopy.com/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+      <category term="经济学" scheme="https://solleter.me/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title>音乐游戏开发之从 midi 文件中提取重音点</title>
-    <link href="http://f.mayopy.com/2019/08/04/%E9%9F%B3%E4%B9%90%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E4%B9%8B%E4%BB%8E-midi-%E6%96%87%E4%BB%B6%E4%B8%AD%E6%8F%90%E5%8F%96%E9%87%8D%E9%9F%B3%E7%82%B9/"/>
-    <id>http://f.mayopy.com/2019/08/04/音乐游戏开发之从-midi-文件中提取重音点/</id>
+    <link href="https://solleter.me/2019/08/04/%E9%9F%B3%E4%B9%90%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E4%B9%8B%E4%BB%8E-midi-%E6%96%87%E4%BB%B6%E4%B8%AD%E6%8F%90%E5%8F%96%E9%87%8D%E9%9F%B3%E7%82%B9/"/>
+    <id>https://solleter.me/2019/08/04/音乐游戏开发之从-midi-文件中提取重音点/</id>
     <published>2019-08-04T13:45:48.000Z</published>
-    <updated>2019-08-04T14:01:55.161Z</updated>
+    <updated>2019-09-01T01:21:07.226Z</updated>
     
     <content type="html"><![CDATA[<p>在开发音乐游戏的过程中，经常需要进行谱子的创作，如果人工手打，很容易造成不准和效率低下的情况。而通过音频人员做的midi文件中提取指定的信号，然后自动生成谱子，将大大提高效率和准确度。</p><p>本篇文章将解释使用 <code>Python</code> 从 <code>midi</code> 文件中提取指定信号，然后生成谱子的逻辑。</p><h2 id="1-与-midi-文件相关的东西"><a href="#1-与-midi-文件相关的东西" class="headerlink" title="1. 与 midi 文件相关的东西"></a><strong>1. 与 <code>midi</code> 文件相关的东西</strong></h2><p>midi 文件中有一个信号的概念，例如 <code>note_on</code> , <code>note_off</code>，为了做谱子，我们为不同的信号赋予不同的数值，然后以此来生成不同的谱子。</p><h2 id="2-使用-midi-文件生成谱子的逻辑"><a href="#2-使用-midi-文件生成谱子的逻辑" class="headerlink" title="2. 使用 midi 文件生成谱子的逻辑"></a><strong>2. 使用 midi 文件生成谱子的逻辑</strong></h2><p>以 QQ 炫舞为例，游戏中有多种<code>点</code>，例如点击的，滑动的，需要按住的，等等。这里我们用 midi 中的<code>note_on</code>事件做逻辑。首先，一首歌在不同的地方有重音，音频人员只要在对应的时间点上的 <code>note_on</code>事件设定我们约定好的值，例如这里用<code>10</code>作为点击的点，<code>11</code>作为滑动的点，<code>12</code>作为长按的点。<br>拿到作好的 midi 文件后，我们只需要扫描整个 midi 文件中的 <code>note_on</code>事件，然后取出里面的时间点，和对应的值，就可以生成一个可以在游戏中用的谱子。一个谱子是什么样子的，完全由音频人员与策划去决定，程序这边只需要生成就可以。</p><h2 id="3-使用-Python-解析-midi-文件数据"><a href="#3-使用-Python-解析-midi-文件数据" class="headerlink" title="3. 使用 Python 解析 midi 文件数据"></a><strong>3. 使用 Python 解析 midi 文件数据</strong></h2><blockquote><p>这里要用的几个 Python 库，所以需要先安装，运行下面的命令安装 mido。（这里假设开发人员对 Python 有基本的了解）<br><code>pip3 install mido</code></p></blockquote><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> mido</span><br><span class="line"><span class="keyword">from</span> mido <span class="keyword">import</span> MidiFile</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">midi_file_path = <span class="string">'./test.mid'</span></span><br><span class="line">bpm = <span class="number">121</span> <span class="comment"># BPM 是必须的，这一个音频人员知道是什么</span></span><br><span class="line"></span><br><span class="line">tap_value = <span class="number">10</span>  <span class="comment"># 定义点击的值</span></span><br><span class="line">wipe_value = <span class="number">11</span> <span class="comment"># 定义滑动的值</span></span><br><span class="line">hold_value = <span class="number">12</span> <span class="comment"># 定义按住的值</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 这一个是为了适应人的听感，而加的偏移值，midi 文件的时间是准的</span></span><br><span class="line"><span class="comment"># 但是人耳朵听起来可能不是很准，最终是以人耳听起来准为目标</span></span><br><span class="line"><span class="comment"># 这个值不固定，根据自己游戏的音乐类型不同，以及做音频的人的听感不同，而设定，可以是正的，可以是负的</span></span><br><span class="line">time_offset = <span class="number">0.25</span> </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_base_notes_data</span><span class="params">(_midi_file_path, _bpm)</span>:</span></span><br><span class="line">    mid = MidiFile(_midi_file_path)</span><br><span class="line">    tempo = mido.bpm2tempo(_bpm)</span><br><span class="line">    _note_list = []</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i, track <span class="keyword">in</span> enumerate(mid.tracks):</span><br><span class="line">        print(<span class="string">'Track &#123;&#125;: &#123;&#125;'</span>.format(i, track.name))</span><br><span class="line">        passed_time = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> msg <span class="keyword">in</span> track:</span><br><span class="line">            ab_time = mido.tick2second(msg.time, mid.ticks_per_beat, tempo)</span><br><span class="line">            real_time = ab_time + passed_time</span><br><span class="line">            passed_time += ab_time</span><br><span class="line">            <span class="comment"># print(msg, " passed time=" + str(ab_time), " read time=" + str(round(real_time, 3)))</span></span><br><span class="line">            <span class="keyword">if</span> msg.type == <span class="string">"note_on"</span>:</span><br><span class="line">                note_value = msg.note</span><br><span class="line">                <span class="keyword">if</span> note_value == tap_value:</span><br><span class="line">                    note_name = <span class="string">"tap"</span></span><br><span class="line">                <span class="keyword">elif</span> note_value == wipe_value:</span><br><span class="line">                    note_name = <span class="string">"wipe"</span></span><br><span class="line">                <span class="keyword">elif</span> note_value == hold_value:</span><br><span class="line">                    note_name = <span class="string">"hold"</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    note_name = <span class="string">""</span></span><br><span class="line">                <span class="keyword">if</span> note_name != <span class="string">""</span>:</span><br><span class="line">                    note_data = &#123;<span class="string">"note_name"</span>: note_name, <span class="string">"time"</span>: round(real_time + time_offset, <span class="number">3</span>)&#125;</span><br><span class="line">                    _note_list.append(note_data)</span><br><span class="line">                    print(note_data)</span><br><span class="line">    <span class="keyword">return</span> _note_list</span><br><span class="line"></span><br><span class="line">get_base_notes_data(midi_file_path, bpm)</span><br></pre></td></tr></table></figure><p>运行代码 <code>python3 xxx.py</code> （xxx 是你保存的 python 文件的名字）</p><blockquote><p>这段代码只实现了最核心的 midi 数据提取，具体的自动化逻辑需要使用者自己写，例如当前有100个 midi 文件，不可能手动一个一个生成。</p></blockquote>]]></content>
     
@@ -114,18 +167,18 @@
     </summary>
     
     
-      <category term="游戏开发" scheme="http://f.mayopy.com/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/"/>
+      <category term="游戏开发" scheme="https://solleter.me/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/"/>
     
-      <category term="Python" scheme="http://f.mayopy.com/tags/Python/"/>
+      <category term="Python" scheme="https://solleter.me/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>Unity3D 使用贝塞尔曲线控制物体抛物线移动</title>
-    <link href="http://f.mayopy.com/2019/07/22/Unity3D-%E4%BD%BF%E7%94%A8%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF%E6%8E%A7%E5%88%B6%E7%89%A9%E4%BD%93%E6%8A%9B%E7%89%A9%E7%BA%BF%E7%A7%BB%E5%8A%A8/"/>
-    <id>http://f.mayopy.com/2019/07/22/Unity3D-使用贝塞尔曲线控制物体抛物线移动/</id>
+    <link href="https://solleter.me/2019/07/22/Unity3D-%E4%BD%BF%E7%94%A8%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF%E6%8E%A7%E5%88%B6%E7%89%A9%E4%BD%93%E6%8A%9B%E7%89%A9%E7%BA%BF%E7%A7%BB%E5%8A%A8/"/>
+    <id>https://solleter.me/2019/07/22/Unity3D-使用贝塞尔曲线控制物体抛物线移动/</id>
     <published>2019-07-22T15:44:23.000Z</published>
-    <updated>2019-08-04T14:00:31.112Z</updated>
+    <updated>2019-09-01T01:21:07.215Z</updated>
     
     <content type="html"><![CDATA[<h2 id="1-通俗来说贝塞尔曲线"><a href="#1-通俗来说贝塞尔曲线" class="headerlink" title="1. 通俗来说贝塞尔曲线"></a><strong>1. 通俗来说贝塞尔曲线</strong></h2><p>在游戏开发中，经常会用到抛物线，例如导弹抛物线飞行，用贝塞尔曲线很容易实现。通俗来讲，贝塞尔曲线就是通过三个点，产生一条曲线，通过一个变量 <code>t</code>，可以取到曲线上的某一个点的位置，这里的 <code>t</code> 取值是从<code>0.0~1.0</code>之间。例如 <code>t</code>取<code>0.5</code>，就是取曲线相对来说<code>中间</code>的位置点。我觉得这里的 <code>0.0~1.0</code>可以当作一个<code>百分比</code>来用。<br><a id="more"></a></p><h2 id="2-曲线函数"><a href="#2-曲线函数" class="headerlink" title="2. 曲线函数"></a><strong>2. 曲线函数</strong></h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 返回曲线在某一时间t上的点</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="_point0"&gt;</span>起始点<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="_point1"&gt;</span>中间点<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="_point2"&gt;</span>终止点<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="t"&gt;</span>当前时间t(0.0~1.0)<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Vector3 <span class="title">GetCurvePoint</span>(<span class="params">Vector3 _point0, Vector3 _point1, Vector3 _point2, <span class="keyword">float</span> t</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    t = Mathf.Clamp(t, <span class="number">0.0f</span>, <span class="number">1.0f</span>);</span><br><span class="line">    <span class="keyword">float</span> x = ((<span class="number">1</span> - t) * (<span class="number">1</span> - t)) * _point0.x + <span class="number">2</span> * t * (<span class="number">1</span> - t) * _point1.x + t * t * _point2.x;</span><br><span class="line">    <span class="keyword">float</span> y = ((<span class="number">1</span> - t) * (<span class="number">1</span> - t)) * _point0.y + <span class="number">2</span> * t * (<span class="number">1</span> - t) * _point1.y + t * t * _point2.y;</span><br><span class="line">    <span class="keyword">float</span> z = ((<span class="number">1</span> - t) * (<span class="number">1</span> - t)) * _point0.z + <span class="number">2</span> * t * (<span class="number">1</span> - t) * _point1.z + t * t * _point2.z;</span><br><span class="line">    Vector3 pos = <span class="keyword">new</span> Vector3(x, y, z);</span><br><span class="line">    <span class="keyword">return</span> pos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>例如一个炮弹从A点要打到B点，在A和B的上方使用一个点作为中间点，就可以拉出一条曲线来，然后通过时间增量t，在Update中不断取这条曲线上的点，赋予炮弹，就可以让炮弹按抛物线飞行。</p><h2 id="3-一个大概的应用"><a href="#3-一个大概的应用" class="headerlink" title="3. 一个大概的应用"></a><strong>3. 一个大概的应用</strong></h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"><span class="keyword">using</span> System.Collections;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">CurveTest</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> Transform fromPoint;     <span class="comment">// 起始点</span></span><br><span class="line">    <span class="keyword">public</span> Transform middlePoint;   <span class="comment">// 中间点</span></span><br><span class="line">    <span class="keyword">public</span> Transform endPoint;      <span class="comment">// 终止点</span></span><br><span class="line">    <span class="keyword">public</span> Transform moveObj;       <span class="comment">// 要移动的物体</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">float</span> ticker = <span class="number">0.0f</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">float</span> attackTime = <span class="number">2.0f</span>;    <span class="comment">// 假设要用2秒飞到目标点</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 返回曲线在某一时间t上的点</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="_p0"&gt;</span>起始点<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="_p1"&gt;</span>中间点<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="_p2"&gt;</span>终止点<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="t"&gt;</span>当前时间t(0.0~1.0)<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Vector3 <span class="title">GetCurvePoint</span>(<span class="params">Vector3 _p0, Vector3 _p1, Vector3 _p2, <span class="keyword">float</span> t</span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        t = Mathf.Clamp(t, <span class="number">0.0f</span>, <span class="number">1.0f</span>);</span><br><span class="line">        <span class="keyword">float</span> x = ((<span class="number">1</span> - t) * (<span class="number">1</span> - t)) * _p0.x + <span class="number">2</span> * t * (<span class="number">1</span> - t) * _p1.x + t * t * _p2.x;</span><br><span class="line">        <span class="keyword">float</span> y = ((<span class="number">1</span> - t) * (<span class="number">1</span> - t)) * _p0.y + <span class="number">2</span> * t * (<span class="number">1</span> - t) * _p1.y + t * t * _p2.y;</span><br><span class="line">        <span class="keyword">float</span> z = ((<span class="number">1</span> - t) * (<span class="number">1</span> - t)) * _p0.z + <span class="number">2</span> * t * (<span class="number">1</span> - t) * _p1.z + t * t * _p2.z;</span><br><span class="line">        Vector3 pos = <span class="keyword">new</span> Vector3(x, y, z);</span><br><span class="line">        <span class="keyword">return</span> pos;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Update</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        ticker += Time.deltaTime;</span><br><span class="line">        <span class="keyword">float</span> t = ticker / attackTime;  <span class="comment">// 这里是计算当前已用时间占计划用时间的百分比，当作增量t</span></span><br><span class="line">        t = Mathf.Clamp(t, <span class="number">0.0f</span>, <span class="number">1.0f</span>);</span><br><span class="line">Vector3 p1 = fromPoint.position;</span><br><span class="line">Vector3 p2 = middlePoint.position;</span><br><span class="line">Vector3 p3 = endPoint.position;</span><br><span class="line">        Vector3 currPos = GetCurvePoint(p1, p2, p3, timeValue);</span><br><span class="line">        moveObj.position = currPos;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(t == <span class="number">1.0f</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// 到达目标点</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="4-维基百科上对于贝塞尔曲线的解释"><a href="#4-维基百科上对于贝塞尔曲线的解释" class="headerlink" title="4. 维基百科上对于贝塞尔曲线的解释"></a><strong>4. <a href="https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A" target="_blank" rel="noopener">维基百科</a>上对于贝塞尔曲线的解释</strong></h2><p><img src="https://i.loli.net/2019/07/22/5d35d8dbbe7c382626.gif" alt="image"></p><p>图片来自维基百科</p>]]></content>
     
@@ -135,23 +188,23 @@
     
     </summary>
     
-      <category term="Unity3D" scheme="http://f.mayopy.com/categories/Unity3D/"/>
+      <category term="Unity3D" scheme="https://solleter.me/categories/Unity3D/"/>
     
     
-      <category term="游戏开发" scheme="http://f.mayopy.com/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/"/>
+      <category term="游戏开发" scheme="https://solleter.me/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/"/>
     
-      <category term="Unity3D" scheme="http://f.mayopy.com/tags/Unity3D/"/>
+      <category term="Unity3D" scheme="https://solleter.me/tags/Unity3D/"/>
     
-      <category term="数学" scheme="http://f.mayopy.com/tags/%E6%95%B0%E5%AD%A6/"/>
+      <category term="数学" scheme="https://solleter.me/tags/%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title>Unity3D UGUI 全局屏幕点击特效方案</title>
-    <link href="http://f.mayopy.com/2019/07/21/Unity3D-UGUI-%E5%85%A8%E5%B1%80%E5%B1%8F%E5%B9%95%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88%E6%96%B9%E6%A1%88/"/>
-    <id>http://f.mayopy.com/2019/07/21/Unity3D-UGUI-全局屏幕点击特效方案/</id>
+    <link href="https://solleter.me/2019/07/21/Unity3D-UGUI-%E5%85%A8%E5%B1%80%E5%B1%8F%E5%B9%95%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88%E6%96%B9%E6%A1%88/"/>
+    <id>https://solleter.me/2019/07/21/Unity3D-UGUI-全局屏幕点击特效方案/</id>
     <published>2019-07-21T06:15:00.000Z</published>
-    <updated>2019-08-04T14:07:04.146Z</updated>
+    <updated>2019-09-01T01:21:07.214Z</updated>
     
     <content type="html"><![CDATA[<p>在游戏开发中，经常会用到全局的屏幕点击特效，就是玩家在点击屏幕的时候，在屏幕最上层，播放一个特效，这个教程使用UGUI来实现，UI使用独立的相机渲染。</p><h2 id="1-先看效果图"><a href="#1-先看效果图" class="headerlink" title="1. 先看效果图"></a><strong>1. 先看效果图</strong></h2><p><img src="https://i.loli.net/2019/07/21/5d340f1566f1f23086.gif" alt="image"></p><p><a href="https://github.com/Solleter/ScreenTapFX" target="_blank" rel="noopener">示例工程 -&gt; Github</a></p><blockquote><p>示例工具中用到的特效资源来自于 Unity 的 AssetStore 免费资源 JMO Assets</p></blockquote><h2 id="2-在实现之前，首先要准备好的东西"><a href="#2-在实现之前，首先要准备好的东西" class="headerlink" title="2. 在实现之前，首先要准备好的东西"></a><strong>2. 在实现之前，首先要准备好的东西</strong></h2><ol><li><p>准备好一个要使用的粒子特效</p><ul><li>将特效 Prefab 的 Layer 全部设置成UI</li><li>将特效Prefab中所有的 Particle System 组件上 Renderer 属性中的 SortingLayer 设置为UI，如果没有这一层，则先添加</li><li>然后将 Renderer 属性中的 Order in Layer 设置为100 ，确保比所有的UI层级高</li></ul></li><li><p>创建UI结构</p><ul><li>UIRoot (一个空物体，用作UI的Root)<ul><li>UICamera (用于渲染UI的相机)</li><li>Canvas (用于显示UI元素)<ul><li>FXContainer (空物体，用作屏幕特效的父物体)</li></ul></li></ul></li></ul></li><li>编写播放逻辑</li></ol><h2 id="3-下面是UI结构各层的设置"><a href="#3-下面是UI结构各层的设置" class="headerlink" title="3. 下面是UI结构各层的设置"></a><strong>3. 下面是UI结构各层的设置</strong></h2><blockquote><p>UI层级结构中的那个Background忽略就好，就是随便加的一个 Image 作为背景</p></blockquote><ol><li><h4 id="UIRoot"><a href="#UIRoot" class="headerlink" title="UIRoot"></a>UIRoot</h4> <img src="https://i.loli.net/2019/07/21/5d3408ae38d9f39338.png" alt="image"></li><li><h4 id="UICamera"><a href="#UICamera" class="headerlink" title="UICamera"></a>UICamera</h4> <img src="https://i.loli.net/2019/07/21/5d3409065c4f353338.png" alt="image"></li><li><h4 id="Canvas"><a href="#Canvas" class="headerlink" title="Canvas"></a>Canvas</h4> <img src="https://i.loli.net/2019/07/21/5d34096b246bc83909.png" alt="image"></li><li><h4 id="FXContainer"><a href="#FXContainer" class="headerlink" title="FXContainer"></a>FXContainer</h4> <img src="https://i.loli.net/2019/07/21/5d3409b49164450657.png" alt="image"></li></ol><h2 id="4-下面是挂在-FXContainer-上的脚本"><a href="#4-下面是挂在-FXContainer-上的脚本" class="headerlink" title="4. 下面是挂在 FXContainer 上的脚本"></a><strong>4. 下面是挂在 FXContainer 上的脚本</strong></h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System.Collections;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">ScreenTapFX</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 屏幕特效原始资源</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="keyword">public</span> GameObject fxSample;</span><br><span class="line"></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 屏幕特效的生命时长，超过后会进行缓存</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">float</span> fxLifeTime = <span class="number">1.0f</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 屏幕特效的容器（父对象）</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="keyword">public</span> RectTransform fxContainer;</span><br><span class="line"></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 屏幕特效渲染使用的相机</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="keyword">public</span> Camera fxRenderCamera;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Queue&lt;GameObject&gt; pool = <span class="keyword">new</span> Queue&lt;GameObject&gt;(<span class="number">20</span>);</span><br><span class="line">    <span class="keyword">private</span> List&lt;GameObject&gt; activatedFXList = <span class="keyword">new</span> List&lt;GameObject&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Awake</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="keyword">if</span>(fxSample == <span class="literal">null</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            Debug.LogErrorFormat(<span class="string">"没有找到屏幕特效"</span>);</span><br><span class="line">            <span class="keyword">this</span>.enabled = <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            fxSample.SetActive(<span class="literal">false</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Update</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = activatedFXList.Count - <span class="number">1</span>; i &gt;= <span class="number">0</span>; --i)</span><br><span class="line">        &#123;</span><br><span class="line">            GameObject fx = activatedFXList[i];</span><br><span class="line">            <span class="keyword">float</span> fxTime = <span class="keyword">float</span>.Parse(fx.name);</span><br><span class="line">            <span class="keyword">if</span>(Time.time - fxTime &gt; fxLifeTime)</span><br><span class="line">            &#123;</span><br><span class="line">                RecycleFX(fx);</span><br><span class="line">                activatedFXList.RemoveAt(i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (Application.isMobilePlatform)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; Input.touchCount; ++i)</span><br><span class="line">            &#123;</span><br><span class="line">                Touch touch = Input.GetTouch(i);</span><br><span class="line">                <span class="keyword">if</span>(touch.phase == TouchPhase.Began)</span><br><span class="line">                &#123;</span><br><span class="line">                    PlayFX(touch.position);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (Input.GetMouseButtonDown(<span class="number">0</span>))</span><br><span class="line">            &#123;</span><br><span class="line">                PlayFX(Input.mousePosition);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">PlayFX</span>(<span class="params">Vector2 tapPos</span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        GameObject fx = CreateFX();</span><br><span class="line">        fx.name = Time.time.ToString();</span><br><span class="line">        activatedFXList.Add(fx);</span><br><span class="line"></span><br><span class="line">        RectTransform fxRectTrans = fx.GetComponent&lt;RectTransform&gt;();</span><br><span class="line">        Vector2 fxLocalPos;</span><br><span class="line">        RectTransformUtility.ScreenPointToLocalPointInRectangle(fxContainer, tapPos, fxRenderCamera, <span class="keyword">out</span> fxLocalPos);</span><br><span class="line">        fxRectTrans.SetParent(fxContainer);</span><br><span class="line">        fxRectTrans.anchoredPosition3D = fxLocalPos;</span><br><span class="line">        fx.SetActive(<span class="literal">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> GameObject <span class="title">CreateFX</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        GameObject newFX = <span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">if</span>(pool.Count &gt; <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            newFX = pool.Dequeue();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            newFX = Instantiate(fxSample);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> newFX;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">RecycleFX</span>(<span class="params">GameObject fx</span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        fx.SetActive(<span class="literal">false</span>);</span><br><span class="line">        pool.Enqueue(fx);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -165,21 +218,21 @@
     
     </summary>
     
-      <category term="Unity3D" scheme="http://f.mayopy.com/categories/Unity3D/"/>
+      <category term="Unity3D" scheme="https://solleter.me/categories/Unity3D/"/>
     
     
-      <category term="游戏开发" scheme="http://f.mayopy.com/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/"/>
+      <category term="游戏开发" scheme="https://solleter.me/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/"/>
     
-      <category term="Unity3D" scheme="http://f.mayopy.com/tags/Unity3D/"/>
+      <category term="Unity3D" scheme="https://solleter.me/tags/Unity3D/"/>
     
-      <category term="UGUI" scheme="http://f.mayopy.com/tags/UGUI/"/>
+      <category term="UGUI" scheme="https://solleter.me/tags/UGUI/"/>
     
   </entry>
   
   <entry>
     <title>测试代码高亮</title>
-    <link href="http://f.mayopy.com/2019/06/26/%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/"/>
-    <id>http://f.mayopy.com/2019/06/26/测试代码高亮/</id>
+    <link href="https://solleter.me/2019/06/26/%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/"/>
+    <id>https://solleter.me/2019/06/26/测试代码高亮/</id>
     <published>2019-06-26T07:24:49.000Z</published>
     <updated>2019-07-21T07:55:06.533Z</updated>
     
@@ -200,10 +253,10 @@
   
   <entry>
     <title>图解经济学-06-关于生产、利润、成本</title>
-    <link href="http://f.mayopy.com/2019/06/23/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6-06-%E5%85%B3%E4%BA%8E%E7%94%9F%E4%BA%A7%E3%80%81%E5%88%A9%E6%B6%A6%E3%80%81%E6%88%90%E6%9C%AC/"/>
-    <id>http://f.mayopy.com/2019/06/23/图解经济学-06-关于生产、利润、成本/</id>
+    <link href="https://solleter.me/2019/06/23/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6-06-%E5%85%B3%E4%BA%8E%E7%94%9F%E4%BA%A7%E3%80%81%E5%88%A9%E6%B6%A6%E3%80%81%E6%88%90%E6%9C%AC/"/>
+    <id>https://solleter.me/2019/06/23/图解经济学-06-关于生产、利润、成本/</id>
     <published>2019-06-23T04:23:26.000Z</published>
-    <updated>2019-06-29T06:22:56.493Z</updated>
+    <updated>2019-09-01T01:21:07.221Z</updated>
     
     <content type="html"><![CDATA[<h3 id="总成本"><a href="#总成本" class="headerlink" title="总成本"></a>总成本</h3><ul><li><p>固定成本/沉没成本</p><p>就算企业生产量为零，也必须支付的固定费用。例如，厂房租金，设备，债务，员工薪水等</p><a id="more"></a></li><li><p>可变成本</p><p>随着产出出水变化而变化的开支，例如原材料，工资，燃料等</p></li><li><p>边际成本</p><p>由于多生产一单位产出而增加的成本。例如生产100张年画为100元，那么生产101张年画的总成本为100.3元，那么0.3元就是生产第101张年画的边际成本。</p></li><li><p>平均成本</p><p>总成本除以产品的单位总数</p><ul><li><p>平均固定成本</p><p>不变的总固定成本除以不断增加的产量。随着时间的推移，平均固定成本越来越小，以至无穷小。</p></li><li><p>平均可变成本</p></li></ul></li><li><p>长期成本</p><p>长期中生产一定量产品所需要的成本</p></li><li><p>短期成本</p><p>短期内生产一定量产品所需要的成本</p></li></ul><h3 id="显性成本和隐性成本"><a href="#显性成本和隐性成本" class="headerlink" title="显性成本和隐性成本"></a>显性成本和隐性成本</h3><p>可以由货币来支付的成本，称为显性成本，而那些不要求用货币来支付的机会成本，称为隐性成本。</p><h3 id="经济利润"><a href="#经济利润" class="headerlink" title="经济利润"></a>经济利润</h3><p>经济学家计算利润的方法，是用企业的总收益减去生产所销售物品与劳务耗去的所有机会成本(同时包括显性和隐性成本)</p><h3 id="会计利润"><a href="#会计利润" class="headerlink" title="会计利润"></a>会计利润</h3><p>会计师在计算企业的经济利润时，只用企业的总收益减去其显性成本。</p><h3 id="边际产量"><a href="#边际产量" class="headerlink" title="边际产量"></a>边际产量</h3><p>投入增加一单位时所得到的产量的增加</p><p>值得注意的是，随着工人数量的增加，工人的边际产量在逐渐降低</p><h3 id="边际收益递减规律"><a href="#边际收益递减规律" class="headerlink" title="边际收益递减规律"></a>边际收益递减规律</h3><p>在增加一种投入而保持其他条件不变时，所增加投入的边际产量至少自某点开始会逐渐下降</p><h3 id="规模报酬"><a href="#规模报酬" class="headerlink" title="规模报酬"></a>规模报酬</h3><p>在现实生活中，大部分企业在长期生产时，往往会在很多方而同时增加投入，这种产出对于很多方面增加的投入的反应，经济学家使用规模报酬这个概念来描述</p><ul><li><p>规模报酬不变</p><p>产出随着所有投入的增加而同比例增加。例如在农业上，如果土地、劳动、资本等投入同时增加一倍，那么如果 规模报酬不变的话，得到的产出应该也是原来的一倍。</p></li><li><p>规模报酬递增</p><p>产出随着所有的投入增加以更大比例增加。最典型的例子是输油管。直径扩大一倍时，输油量增加超过一倍</p></li><li><p>规模报酬递减</p><p>产出随着所有投入的均衡增加而较少比例增加。</p></li></ul><h3 id="产生规模效应的原因"><a href="#产生规模效应的原因" class="headerlink" title="产生规模效应的原因"></a>产生规模效应的原因</h3><ul><li>专业化水平高</li><li>生产要素的组合</li><li>管理成本增加</li></ul><h3 id="企业分类-按照企业所有者的身份来划分"><a href="#企业分类-按照企业所有者的身份来划分" class="headerlink" title="企业分类 (按照企业所有者的身份来划分)"></a>企业分类 (按照企业所有者的身份来划分)</h3><ul><li>个人业主制</li><li>合伙制</li><li>公司制 (股份制)</li></ul><h3 id="有限责任制"><a href="#有限责任制" class="headerlink" title="有限责任制"></a>有限责任制</h3><ul><li>公司制企业所有者承担有限责任，即当公司亏损时，他所承担的额度不会超出期最初的投资。</li><li>非公司制企业的所有者对企业亏损将承担无限责任，存在着为其他无力偿还债务的合伙人埋单的风险</li></ul>]]></content>
     
@@ -215,17 +268,17 @@
     
     </summary>
     
-      <category term="图解经济学" scheme="http://f.mayopy.com/categories/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+      <category term="图解经济学" scheme="https://solleter.me/categories/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
     
-      <category term="经济学" scheme="http://f.mayopy.com/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+      <category term="经济学" scheme="https://solleter.me/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title>图解经济学-05-了解生产要素市场</title>
-    <link href="http://f.mayopy.com/2019/06/16/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6-05-%E4%BA%86%E8%A7%A3%E7%94%9F%E4%BA%A7%E8%A6%81%E7%B4%A0%E5%B8%82%E5%9C%BA/"/>
-    <id>http://f.mayopy.com/2019/06/16/图解经济学-05-了解生产要素市场/</id>
+    <link href="https://solleter.me/2019/06/16/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6-05-%E4%BA%86%E8%A7%A3%E7%94%9F%E4%BA%A7%E8%A6%81%E7%B4%A0%E5%B8%82%E5%9C%BA/"/>
+    <id>https://solleter.me/2019/06/16/图解经济学-05-了解生产要素市场/</id>
     <published>2019-06-16T07:42:32.000Z</published>
     <updated>2019-07-21T07:55:06.532Z</updated>
     
@@ -238,19 +291,19 @@
     
     </summary>
     
-      <category term="图解经济学" scheme="http://f.mayopy.com/categories/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+      <category term="图解经济学" scheme="https://solleter.me/categories/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
     
-      <category term="经济学" scheme="http://f.mayopy.com/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+      <category term="经济学" scheme="https://solleter.me/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title>图解经济学-04-消费者选择理论</title>
-    <link href="http://f.mayopy.com/2019/06/07/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6-04-%E6%B6%88%E8%B4%B9%E8%80%85%E9%80%89%E6%8B%A9%E7%90%86%E8%AE%BA/"/>
-    <id>http://f.mayopy.com/2019/06/07/图解经济学-04-消费者选择理论/</id>
+    <link href="https://solleter.me/2019/06/07/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6-04-%E6%B6%88%E8%B4%B9%E8%80%85%E9%80%89%E6%8B%A9%E7%90%86%E8%AE%BA/"/>
+    <id>https://solleter.me/2019/06/07/图解经济学-04-消费者选择理论/</id>
     <published>2019-06-07T07:17:32.000Z</published>
-    <updated>2019-06-29T06:15:22.965Z</updated>
+    <updated>2019-09-01T01:21:07.219Z</updated>
     
     <content type="html"><![CDATA[<ol><li>消费者会在不同的物品和劳务之间选择最适合自己偏好的排序，以使自己的效用最大化。<a id="more"></a></li><li><p>边际效用是指多消费一单位物品或劳务时所带来的新增的或额外的效用<br>人们口渴时吃西瓜，第一块清凉可口，后面味道就较差些，这正在经济学中著名的边际效用递减规律的佐证。<br>随着对某种物品或劳务的消费增加，人们从中得到新增的或边际的效用量是在不断下降的。</p></li><li><p>当们人用同样的钱消费不同的物品时，不同的物品组合反映了人们的权衡取舍。但不管是怎样的消费组合，每1元钱带来的边际效用总是相同的。</p></li><li><p>非理性消费的根源</p><ul><li>拒绝改变自己的观念</li><li>过分自信</li><li>依惯例行事</li></ul></li><li><p>当一种物品价格下降时，人们会出现两种反映，从而使消费最优发生变化</p><ul><li>有一种人会觉得自己有了变富的感觉，所以他什么都想多买一点 (收入效应)</li><li>另一种人则认为这种物品便宜了，所以他会减少对其他物品的购买，更多地购买这种物品 (替代效应)</li></ul></li><li><p>大多数劳动者的收入效应大于替代效应</p></li></ol>]]></content>
     
@@ -261,19 +314,19 @@
     
     </summary>
     
-      <category term="图解经济学" scheme="http://f.mayopy.com/categories/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+      <category term="图解经济学" scheme="https://solleter.me/categories/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
     
-      <category term="经济学" scheme="http://f.mayopy.com/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+      <category term="经济学" scheme="https://solleter.me/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title>图解经济学-03-供给与价格</title>
-    <link href="http://f.mayopy.com/2019/06/07/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6-03-%E4%BE%9B%E7%BB%99%E4%B8%8E%E4%BB%B7%E6%A0%BC/"/>
-    <id>http://f.mayopy.com/2019/06/07/图解经济学-03-供给与价格/</id>
+    <link href="https://solleter.me/2019/06/07/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6-03-%E4%BE%9B%E7%BB%99%E4%B8%8E%E4%BB%B7%E6%A0%BC/"/>
+    <id>https://solleter.me/2019/06/07/图解经济学-03-供给与价格/</id>
     <published>2019-06-07T05:43:31.000Z</published>
-    <updated>2019-06-29T06:14:53.960Z</updated>
+    <updated>2019-09-01T01:21:07.216Z</updated>
     
     <content type="html"><![CDATA[<ol><li><h3 id="需求价格弹性"><a href="#需求价格弹性" class="headerlink" title="需求价格弹性"></a>需求价格弹性</h3><p>需求量对价格变动的敏感程度。一般来说，物品的需求价格弹性可以理解商品价格变动时，消费者得到或放弃这种物品的意愿有多大。</p><a id="more"></a><ul><li>衣食住行，这些必须品，不管价格怎么变动，人们总归需要，所以需求弹性较小。</li><li>游艇，跑车，这些奢侈品，需求弹性比较大。越便宜，买的人越多，越贵，买的人越少。</li></ul></li><li><h3 id="影响需求弹性的因素"><a href="#影响需求弹性的因素" class="headerlink" title="影响需求弹性的因素"></a>影响需求弹性的因素</h3><ul><li>是否有替代品<br>有替代品的商品，比较富有弹性，例如在一种商品价格升高时，人们可以放弃这种物品，转而选择它的替代品，例如猪肉和羊肉牛肉。</li><li>必须品还是奢侈品</li><li>市场大小<br>市场大小很重要，关系到它们找到替代品的容易程度</li><li>时间因素<br>以较长的时间来看，物品的需求弹性会增大。例如汽油的价格提高时，最初两三个月需求量减少得很少，但时间一长，人们会想出办法来减少对汽油的需求量。</li></ul></li><li><h3 id="供给价格弹性"><a href="#供给价格弹性" class="headerlink" title="供给价格弹性"></a>供给价格弹性</h3><p>供给弹性，可以理解为一种商品价格变动时，市场上这种商品供给量的变化，也就是说，当价格变化时，生产商是要增加产量，还是减少产量。<br>像海滩、土地缺乏供给价格弹性，因为几乎不能生产，而书籍，珠宝，数码相机等的供给价格弹性很大。</p></li><li><h3 id="影响供给弹性的两个因素"><a href="#影响供给弹性的两个因素" class="headerlink" title="影响供给弹性的两个因素"></a>影响供给弹性的两个因素</h3><ul><li>行业中增加生产的困难程度<br>例如服装行业，它的生产能力是很弹的，所以市场价格一有上升，其产量会立刻激增，很有弹性。<br>例如历史文物，不管价格怎么变，增加量十分微小，导致供给缺乏弹性。</li><li>考察时间长短<br>许多物品和劳务在价格提升后，短时间内数量不会有太大的变化，但时间一长，多少衣服会使用各种方法提高生产效率，并扩大生产，从而使产量有质的提升，这样长期来看，供给弹性就会比较大。例如20年前，电脑的生产量十分有限，但是现在，生产能力已经很大，所以供给弹性也增加了很多。</li></ul></li><li><h3 id="关于丰收悖论"><a href="#关于丰收悖论" class="headerlink" title="关于丰收悖论"></a>关于丰收悖论</h3><p> 农作物越增产，农民的收税越降低，这就是经济学上著名的丰收悖论</p><p> <strong><em>由于大部分农作物缺乏需求弹性。食物供给增加了，而人们的食物需求并没有太大的变化，所以农业整体收益下降了很多。</em></strong></p></li></ol>]]></content>
     
@@ -284,17 +337,17 @@
     
     </summary>
     
-      <category term="图解经济学" scheme="http://f.mayopy.com/categories/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+      <category term="图解经济学" scheme="https://solleter.me/categories/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
     
-      <category term="经济学" scheme="http://f.mayopy.com/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+      <category term="经济学" scheme="https://solleter.me/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title>图解经济学-02-商品市场</title>
-    <link href="http://f.mayopy.com/2019/06/03/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6-02-%E5%95%86%E5%93%81%E5%B8%82%E5%9C%BA/"/>
-    <id>http://f.mayopy.com/2019/06/03/图解经济学-02-商品市场/</id>
+    <link href="https://solleter.me/2019/06/03/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6-02-%E5%95%86%E5%93%81%E5%B8%82%E5%9C%BA/"/>
+    <id>https://solleter.me/2019/06/03/图解经济学-02-商品市场/</id>
     <published>2019-06-03T00:13:47.000Z</published>
     <updated>2019-06-29T06:13:02.612Z</updated>
     
@@ -307,17 +360,17 @@
     
     </summary>
     
-      <category term="图解经济学" scheme="http://f.mayopy.com/categories/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+      <category term="图解经济学" scheme="https://solleter.me/categories/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
     
-      <category term="经济学" scheme="http://f.mayopy.com/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+      <category term="经济学" scheme="https://solleter.me/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title>图解经济学-01-开始学习经济学</title>
-    <link href="http://f.mayopy.com/2019/05/19/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6-01-%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
-    <id>http://f.mayopy.com/2019/05/19/图解经济学-01-开始学习经济学/</id>
+    <link href="https://solleter.me/2019/05/19/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6-01-%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+    <id>https://solleter.me/2019/05/19/图解经济学-01-开始学习经济学/</id>
     <published>2019-05-19T15:00:06.000Z</published>
     <updated>2019-06-29T06:13:35.752Z</updated>
     
@@ -330,10 +383,10 @@
     
     </summary>
     
-      <category term="图解经济学" scheme="http://f.mayopy.com/categories/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+      <category term="图解经济学" scheme="https://solleter.me/categories/%E5%9B%BE%E8%A7%A3%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
     
-      <category term="经济学" scheme="http://f.mayopy.com/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+      <category term="经济学" scheme="https://solleter.me/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
   </entry>
   

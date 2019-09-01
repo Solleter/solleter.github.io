@@ -4,6 +4,52 @@
   
     
     <entry>
+      <title>Rust笔记-01-安装Rust</title>
+      <link href="/2019/08/29/Rust%E7%AC%94%E8%AE%B0-01-%E5%AE%89%E8%A3%85Rust/"/>
+      <url>/2019/08/29/Rust%E7%AC%94%E8%AE%B0-01-%E5%AE%89%E8%A3%85Rust/</url>
+      
+        <content type="html"><![CDATA[<p>关于Rust的介绍，这里不再描述什么，网络上已经有很多信息了，这里，我们直接开始。</p><blockquote><p>关于是否应该学习Rust，这个没有标准答案，对于我来说，主要是想在编译型系统级语言上有点积累，因为我对C++只是了解，大概能看懂，远没达到熟练码代码的层次，但是我又不想学习C++，所以就选择了Rust。</p></blockquote><h4 id="在安装之前，有几个东西要大概明白"><a href="#在安装之前，有几个东西要大概明白" class="headerlink" title="在安装之前，有几个东西要大概明白"></a>在安装之前，有几个东西要大概明白</h4><ul><li><code>Rustup</code> 是用来安装、更新、管理 Rust 不同平台版本的东西</li><li><code>Rust</code> 版本有 <code>Stable</code>，<code>Nightly</code>，一些新特性一般会在 Nightly 版本里，稳定了后官方可能会加到Stable里，一般情况我们使用Stable版本就可以</li><li><code>toolchain</code> 这里我们简单地理解为某个Rust版本就行</li><li>在 Windows 上，会发现即使 Stable 版本，也会有 <code>gnu</code> 和 <code>msvc</code> 两种版本，目前使用哪种都行，默认在windows上使用的是msvc，这里保持默认就行</li><li><code>cargo</code> 用于组织Rust项目项目，例如创建项目，构建项目，测试项目等。</li></ul><h2 id="下载和安装-Rustup"><a href="#下载和安装-Rustup" class="headerlink" title="下载和安装 Rustup"></a>下载和安装 Rustup</h2><p>访问 <a href="https://www.rust-lang.org/zh-CN/tools/install" target="_blank" rel="noopener"><code>https://www.rust-lang.org/zh-CN/tools/install</code></a>，如果是在Windows系统下，那就下载 <code>RUSTUP-INIT.EXE</code>，如果是OSX或者Linux等，就使用它的脚本下载 <code>curl https://sh.rustup.rs -sSf | sh</code></p><h2 id="安装-Rust"><a href="#安装-Rust" class="headerlink" title="安装 Rust"></a>安装 Rust</h2><p>下载好 <code>rustup</code> 后就运行，osx或linux下应该会自动运行，运行后会出现下面的界面<br><img src="https://i.loli.net/2019/08/30/W2LFYi1ZNoEHnal.png" alt="1.png"><br>这里保持默认就好，输入 <code>1</code> 然后按回车，进行安装。这里可以看到默认安装的是 <code>stable msvc</code> 版本的 <code>rust</code>。这里会自动下载，安装，然后设置。</p><p><img src="https://i.loli.net/2019/08/30/WZ8KIkOVRn7QBMq.png" alt="2.png"><br>到这里，看到这个界面，就表示已经下载和安装好，可以使用了。</p><h2 id="查看及修改配置"><a href="#查看及修改配置" class="headerlink" title="查看及修改配置"></a>查看及修改配置</h2><ol><li><code>rustc --version</code> 查看 rustc 版本</li><li><code>cargo --version</code> 查看 cargo 版本</li><li><code>rustup toolchain list</code> 列出当前已经安装的 rust 版本, (default) 为当前使用的版本</li><li><code>rustup default stable-x86_64-pc-windows-msvc</code><br> 设置使用 stable msvc 版本的 rust (可以简写为 stable-msvc)</li><li><code>rustup default stable-x86_64-pc-windows-gnu</code><br> 设置使用 stable gnu 版本的 rust (可以简写为 stable-gnu)</li></ol><h4 id="下一篇开始使用-cargo-创建工程，开始写代码"><a href="#下一篇开始使用-cargo-创建工程，开始写代码" class="headerlink" title="下一篇开始使用 cargo 创建工程，开始写代码"></a>下一篇开始使用 <code>cargo</code> 创建工程，开始写代码</h4>]]></content>
+      
+      
+      <categories>
+          
+          <category> Rust 基础学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> rust </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>聊聊游戏开发中的逻辑层框架模块</title>
+      <link href="/2019/08/26/%E8%81%8A%E8%81%8A%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E9%80%BB%E8%BE%91%E5%B1%82%E6%A1%86%E6%9E%B6%E6%A8%A1%E5%9D%97/"/>
+      <url>/2019/08/26/%E8%81%8A%E8%81%8A%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E9%80%BB%E8%BE%91%E5%B1%82%E6%A1%86%E6%9E%B6%E6%A8%A1%E5%9D%97/</url>
+      
+        <content type="html"><![CDATA[<p>不管是端游还是手游，在游戏引擎提供的基本支持之上，一个项目，通常还是需要自己的逻辑层框架。今天，我们就聊一聊一个游戏项目基本的逻辑层框架组成部。这里以Unity3D引擎为例，但不限于Unity3D引擎。</p><h4 id="资源管理"><a href="#资源管理" class="headerlink" title="资源管理"></a>资源管理</h4><blockquote><p>一个项目开始，最好就规划好资源目录。随着项目的开发，资源会越来越多，越往后，越难整理，而且需要耗费大量时间和精力，所以建议随着项目的开发，就不断地做好资源规划和整理的工作。</p></blockquote><h4 id="编辑器阶段"><a href="#编辑器阶段" class="headerlink" title="编辑器阶段"></a>编辑器阶段</h4><blockquote><ol><li><strong>资源打包模块</strong><br> 对于Unity3D来说，主要是打包 AssetBundle<br> <br></li><li><strong>配置表导出模块</strong><br> 很多游戏的大量配置，使用excel的形式，所以必然需要一个工具能够将excel表结构，转为代码，并且把表数据，导出到游戏运行时能够解析的格式，例如二进制。还可以自动生成运行时加载解析代码。<br> <br></li><li><strong>协议导出模块</strong><br> 很多游戏使用了google的 FlatBuffers 或者 Protocol Buffers，这里需要一个工具自动化地将协议文件导出成客户端和服务器使用的代码文件。</li></ol></blockquote><h3 id="运行时阶段"><a href="#运行时阶段" class="headerlink" title="运行时阶段"></a>运行时阶段</h3><blockquote><ol><li><strong>更新模块</strong><br> 这个模块主要是根据项目自定义的版本信息，从网络上自动下载需要更新的资源文件，以及代码文件，这里通常使用lua，然后解压到资源目录。这里面涉及到两个重要的东西，一个是版本和资源文件的定义，一个是HTTP请求模块。对于Unity3D，通常使用 UnityWebRequest<br><br></li><li><strong>网络通信模块</strong><br> TCP 或者 UDP，用于客户端和服务器的逻辑通信。收发包数据，根据协议号处理协议，具体处理函数为业务逻辑。<br> <br></li><li><strong>UI管理器</strong><br> 如果是MVC结构，定义好UI面板的基类，各UI类继承基类。UI分层，普通UI面板层，弹出式面板层，Loading层，特效层，等等，具体根据项目需求灵活定义。<br> <br></li><li><strong>事件系统</strong><br> 用于整个工程的业务逻辑之间通信。不过事件这种东西，有一个不好处就是有时候调试起来不是很直接，有时候难以确定是从哪里发来的事件，有弊有利。<br> <br></li><li><strong>代码热更新模块</strong><br> 现在比较常用的解决方案是 lua，虽然写起来比较蛋疼，但是很多项目都这样用，也许是因为没有更好的解决方案，也许是因为技术决策者的经验之谈，这里就呵呵了。<br> <br></li><li><strong>原生交互模块</strong><br> 对于手游，通常分为Android和iOS版本，不同的版本有一些地方需要和原生系统交互，例如将游戏截图保存到相册，这样就需要调用原生系统的API。一些SDK的接入相关的东西，也可以归于这个模块。<br> <br></li><li><strong>一些小的工具类集合</strong><br> <br></li><li><strong>配置表加载解析模块</strong><br> 就是将编辑器阶段打包好的配置表数据，在这里读出来，存起来，用于游戏业务逻辑使用<br> <br></li><li><strong>数据读写模块</strong><br> 有时候需要将一些数据写到本地，对于不同的平台，Android，iOS，PC，存储的路径不同，这个模块会将这些都封装好，上层业务只管用就行，不需要关心路径问题。<br> <br></li><li><strong>音频模块</strong><br>游戏内音频播放及管理，例如同一音源，最多有多少个的控制，等等<br><br></li><li><strong>日志模块</strong><br>日志的打印，各平台写入文件，设备上在屏幕上显示下隐藏，等等</li></ol></blockquote><h4 id="暂时先写这么多，后面不断补充"><a href="#暂时先写这么多，后面不断补充" class="headerlink" title="暂时先写这么多，后面不断补充 :)"></a>暂时先写这么多，后面不断补充 :)</h4>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 游戏开发 </tag>
+            
+            <tag> Unity3D </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>在游戏公司工作-02-人员架构</title>
       <link href="/2019/08/18/%E5%9C%A8%E6%B8%B8%E6%88%8F%E5%85%AC%E5%8F%B8%E5%B7%A5%E4%BD%9C-02-%E4%BA%BA%E5%91%98%E6%9E%B6%E6%9E%84/"/>
       <url>/2019/08/18/%E5%9C%A8%E6%B8%B8%E6%88%8F%E5%85%AC%E5%8F%B8%E5%B7%A5%E4%BD%9C-02-%E4%BA%BA%E5%91%98%E6%9E%B6%E6%9E%84/</url>
