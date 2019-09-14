@@ -1,0 +1,62 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.9.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="日常记录"><title>Rust基础学习-07-通俗解释引用与借用 | F社</title><link rel="stylesheet" type="text/css" href="/css/normalize.css"><link rel="stylesheet" type="text/css" href="/css/highlight.css"><link rel="stylesheet" type="text/css" href="/css/font.css"><link rel="stylesheet" type="text/css" href="/css/noise.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><header class="wrapper header"><div class="container blog-title"><a class="title" id="logo" href="/.">F社</a><span class="subtitle">上你娘的班</span><label id="toggle-menu" for="menu" onclick><i class="fa fa-bars"></i></label></div><input id="menu" type="checkbox"><div class="container nav-items"><a class="sidebar-nav-item active" href="/">主页</a><a class="sidebar-nav-item" href="/archives">分类归档</a><a class="sidebar-nav-item" href="/about">关于</a><a class="sidebar-nav-item" href="/links">收集</a></div></header><article class="wrapper"><div class="post-main"><div class="nav"><nav class="container"><!--each nav, name in theme.menu//+a_with_current(nav, __(name))--></nav><div class="container post-meta"><div class="post-tags"><a class="post-tag-link" href="/tags/Rust/">Rust</a></div><div class="post-time">2019-09-14</div></div></div><div class="container post-header"><h1>Rust基础学习-07-通俗解释引用与借用</h1></div><div class="container post-content"><p>今天我们来学习一下Rust中的引用与借用。我在看官方教程讲解引用与借用的时候，很困惑，分不清引用与借用。在第二遍理解的时候，大概能够理清了。</p>
+<p>先来解释一下 <code>引用</code>，Rust官方文档中的解释是 <code>允许使用值但不获取其所有权</code>。与其他语言基本一样，可以理解为就是一个数据指针。</p>
+<p>再来说一下 <code>借用</code>，官方文档中解释借用是指 <code>将获取引用作为函数参数称为 借用（borrowing）</code>。我的理解是，<code>借用</code>不是一个具体的东西，而是一种行为，对于Rust来说，当我们定义一下函数，而函数的形参是一个引用，或者说是一个指针时，这种行为，就叫做借用。可能不太精确地解释，可以理解为，当我们调用这个函数时，这个函数借用了外面某个数据的访问权限，但是并不拥有外面数据的所有权。就像生活中你借了某人的一个网站账号，这时，你可以访问网站上的内容了，但是你没有这个账号的所有权。</p>
+<blockquote>
+<p>当将引用作为参数时，也分为 <code>可变引用</code> 和 <code>不可变引用</code></p>
+</blockquote>
+<h2 id="不可变引用"><a href="#不可变引用" class="headerlink" title="不可变引用"></a>不可变引用</h2><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut</span> <span class="built_in">str</span> = <span class="built_in">String</span>::from(<span class="string">"Hello"</span>);</span><br><span class="line">    borrowing(&amp;<span class="built_in">str</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">borrowing</span></span>(<span class="built_in">str</span>: &amp;<span class="built_in">String</span>) &#123;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"Borrowing Str: &#123;&#125;"</span>, <span class="built_in">str</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="可变引用"><a href="#可变引用" class="headerlink" title="可变引用"></a>可变引用</h2><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut</span> <span class="built_in">str</span> = <span class="built_in">String</span>::from(<span class="string">"Hello"</span>);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"Source Str: &#123;&#125;"</span>, <span class="built_in">str</span>);	<span class="comment">// 这里打印出原来的字符串</span></span><br><span class="line">    mut_borrowing(&amp;<span class="keyword">mut</span> <span class="built_in">str</span>);	<span class="comment">// 调用后，字符串被改变</span></span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"Str: &#123;&#125;"</span>, <span class="built_in">str</span>); <span class="comment">// 打印改变后的字符串</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">mut_borrowing</span></span>(<span class="built_in">str</span>: &amp;<span class="keyword">mut</span> <span class="built_in">String</span>) &#123;</span><br><span class="line">    <span class="built_in">str</span>.push_str(<span class="string">" , Rust"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>有一条很重要的规则要记住，在同一作用域中，一个数据，有且只有一个 <code>可变</code> 引用。</p>
+</blockquote>
+<p>下面一段代码就是错的，编译不过，因为同一作用域下，同一个数据有多个可变引用</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut</span> <span class="built_in">str</span> = <span class="built_in">String</span>::from(<span class="string">"Hello"</span>);</span><br><span class="line">    <span class="keyword">let</span> r1 = &amp;<span class="keyword">mut</span> <span class="built_in">str</span>;</span><br><span class="line">    <span class="keyword">let</span> r2 = &amp;<span class="keyword">mut</span> <span class="built_in">str</span>;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"&#123;&#125;, &#123;&#125;"</span>, r1, r2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="关于数据竞争"><a href="#关于数据竞争" class="headerlink" title="关于数据竞争"></a>关于数据竞争</h2><p>Rust 这样的限制可以避免<code>数据竞争</code>，数据竞争可能由下面三个原因引起</p>
+<ul>
+<li>两个或更多指针同时访问同一数据。</li>
+<li>至少有一个指针被用来写入数据。</li>
+<li>没有同步数据访问的机制。</li>
+</ul>
+<h2 id="悬垂引用（Dangling-References）"><a href="#悬垂引用（Dangling-References）" class="headerlink" title="悬垂引用（Dangling References）"></a>悬垂引用（Dangling References）</h2><p>在拥有指针的编程语言中很容易出现一种情况，一个指针还存在，但是指针指向的内存已经被释放。在Rust中，这种为<code>悬垂引用</code>。在Rust中，Rust编译器确保指针永远不会变为悬垂状态。</p>
+<p>看下面的代码，编译会出错</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> s = dangling();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这个函数返回了字符串的引用，但是当这个函数结束时，字符串内存会被释放，&amp;s变为悬垂状态，所以编译出错</span></span><br><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">dangling</span></span>() -&gt; &amp;<span class="built_in">String</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> s = <span class="built_in">String</span>::from(<span class="string">"Hello rust"</span>);</span><br><span class="line">    &amp;s </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="引用的规则"><a href="#引用的规则" class="headerlink" title="引用的规则"></a>引用的规则</h2><ul>
+<li>在任意给定时间，<strong>要么</strong> 只能有一个可变引用，<strong>要么</strong> 只能有多个不可变引用。</li>
+<li>引用必须总是有效。</li>
+</ul>
+</div></div><script type="text/x-mathjax-config">
+   MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    }); 
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><div class="post-main post-comment"><div id="disqus_thread"></div><script type="text/javascript">
+var disqus_shortname = 'sexy-game-boy';
+var disqus_identifier = '2019/09/14/Rust基础学习-07-引用与借用的解释/';
+var disqus_title = 'Rust基础学习-07-通俗解释引用与借用';
+var disqus_url = 'https://solleter.me/2019/09/14/Rust基础学习-07-引用与借用的解释/';
+(function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">Blog comments powered by <span class="logo-disqus">Disqus</span></a></div></article><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.css"><script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script><script src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script>$(document).ready(function() {
+  $(".fancybox").fancybox();
+});
+</script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+e.src='//www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+ga('create','UA-140200191-1');ga('send','pageview');</script></body></html>
