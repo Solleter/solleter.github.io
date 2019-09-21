@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://solleter.me/2019/09/21/Rust%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-11-%E6%9E%9A%E4%B8%BE%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2019-09-21T08:01:04.971Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://solleter.me/next/index.html</loc>
+    
+    <lastmod>2019-09-21T05:48:25.437Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://solleter.me/about/index.html</loc>
+    
+    <lastmod>2019-09-21T05:48:25.436Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://solleter.me/2019/09/18/Rust%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-10-%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84%E6%96%B9%E6%B3%95/</loc>
+    
+    <lastmod>2019-09-21T05:48:25.435Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://solleter.me/2019/09/16/Rust%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-09-%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84%E5%AE%9A%E4%B9%89/</loc>
+    
+    <lastmod>2019-09-21T05:48:25.434Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://solleter.me/2019/09/14/Rust%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-08-%E5%85%B3%E4%BA%8E%E5%88%87%E7%89%87/</loc>
     
     <lastmod>2019-09-14T08:03:45.651Z</lastmod>
@@ -30,14 +65,14 @@
   </url>
   
   <url>
-    <loc>https://solleter.me/2019/09/08/Rust%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-04-%E5%87%BD%E6%95%B0%E5%92%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
+    <loc>https://solleter.me/2019/09/08/Rust%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-05-if%E3%80%81loop%E3%80%81while%E3%80%81for/</loc>
     
     <lastmod>2019-09-11T13:47:50.124Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://solleter.me/2019/09/08/Rust%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-05-if%E3%80%81loop%E3%80%81while%E3%80%81for/</loc>
+    <loc>https://solleter.me/2019/09/08/Rust%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-04-%E5%87%BD%E6%95%B0%E5%92%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
     
     <lastmod>2019-09-11T13:47:50.124Z</lastmod>
     
@@ -135,23 +170,9 @@
   </url>
   
   <url>
-    <loc>https://solleter.me/about/index.html</loc>
-    
-    <lastmod>2019-08-18T14:05:37.597Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://solleter.me/weekly/index.html</loc>
     
     <lastmod>2019-08-04T14:32:55.443Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://solleter.me/next/index.html</loc>
-    
-    <lastmod>2019-08-04T00:15:10.406Z</lastmod>
     
   </url>
   
