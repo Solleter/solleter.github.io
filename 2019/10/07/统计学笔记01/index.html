@@ -1,0 +1,45 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.9.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="日常记录"><title>统计学笔记01 | F社</title><link rel="stylesheet" type="text/css" href="/css/normalize.css"><link rel="stylesheet" type="text/css" href="/css/highlight.css"><link rel="stylesheet" type="text/css" href="/css/font.css"><link rel="stylesheet" type="text/css" href="/css/noise.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><header class="wrapper header"><div class="container blog-title"><a class="title" id="logo" href="/.">F社</a><span class="subtitle">上你娘的班</span><label id="toggle-menu" for="menu" onclick><i class="fa fa-bars"></i></label></div><input id="menu" type="checkbox"><div class="container nav-items"><a class="sidebar-nav-item active" href="/">主页</a><a class="sidebar-nav-item" href="/archives">分类归档</a><a class="sidebar-nav-item" href="/about">关于</a><a class="sidebar-nav-item" href="/links">收集</a></div></header><article class="wrapper"><div class="post-main"><div class="nav"><nav class="container"><!--each nav, name in theme.menu//+a_with_current(nav, __(name))--></nav><div class="container post-meta"><div class="post-tags"><a class="post-tag-link" href="/tags/统计学/">统计学</a></div><div class="post-time">2019-10-07</div></div></div><div class="container post-header"><h1>统计学笔记01</h1></div><div class="container post-content"><p>这一节笔记涉及到的概念有 <code>均值</code>，<code>中位数</code>，<code>众数</code>，<code>极差</code>，<code>中程数</code>，<code>总体均值</code>，<code>样本均值</code>，<code>离群值</code>。</p>
+<h2 id="1-均值"><a href="#1-均值" class="headerlink" title="1. 均值"></a>1. 均值</h2><p>所有数之和除以数的个数</p>
+<h2 id="2-中位数"><a href="#2-中位数" class="headerlink" title="2. 中位数"></a>2. 中位数</h2><p>所有数从小到大排序，中间的那个数。如果数的总数为偶数，则为中间两个数的平均数</p>
+<h2 id="3-众数"><a href="#3-众数" class="headerlink" title="3. 众数"></a>3. 众数</h2><p>出现次数最多的那个数</p>
+<h2 id="4-极差"><a href="#4-极差" class="headerlink" title="4. 极差"></a>4. 极差</h2><p>最大与最小数之和</p>
+<h2 id="5-中程数"><a href="#5-中程数" class="headerlink" title="5. 中程数"></a>5. 中程数</h2><p>最大与最小数之和除以2</p>
+<h2 id="6-总体均值"><a href="#6-总体均值" class="headerlink" title="6. 总体均值"></a>6. 总体均值</h2><p>总数数据的均值</p>
+<h2 id="7-样本均值"><a href="#7-样本均值" class="headerlink" title="7. 样本均值"></a>7. 样本均值</h2><p>从总体数据中抽样出的部分数据，然后计算这部分数据的均值</p>
+<h2 id="8-离群值"><a href="#8-离群值" class="headerlink" title="8. 离群值"></a>8. 离群值</h2><p>一组数据中，某些值明显与其他值相差很大，这种数据叫做离群值，例如 <code>3, 3, 3, 3, 3, 3, 100</code> 这一组数中，100明显与其他值相差很大，100就是离群值，如果这一组数计算算术平均数，则这个平均数无法反应数据的集中趋势。</p>
+</div></div><script type="text/x-mathjax-config">
+   MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    }); 
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><div class="post-main post-comment"><div id="disqus_thread"></div><script type="text/javascript">
+var disqus_shortname = 'sexy-game-boy';
+var disqus_identifier = '2019/10/07/统计学笔记01/';
+var disqus_title = '统计学笔记01';
+var disqus_url = 'https://solleter.me/2019/10/07/统计学笔记01/';
+(function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">Blog comments powered by <span class="logo-disqus">Disqus</span></a></div></article><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.css"><script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script><script src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script>$(document).ready(function() {
+  $(".fancybox").fancybox();
+});
+</script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+e.src='//www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+ga('create','UA-140200191-1');ga('send','pageview');</script></body></html>

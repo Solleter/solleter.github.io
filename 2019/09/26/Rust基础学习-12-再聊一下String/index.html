@@ -1,0 +1,66 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.9.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="日常记录"><title>Rust基础学习-12-再聊一下String | F社</title><link rel="stylesheet" type="text/css" href="/css/normalize.css"><link rel="stylesheet" type="text/css" href="/css/highlight.css"><link rel="stylesheet" type="text/css" href="/css/font.css"><link rel="stylesheet" type="text/css" href="/css/noise.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><header class="wrapper header"><div class="container blog-title"><a class="title" id="logo" href="/.">F社</a><span class="subtitle">上你娘的班</span><label id="toggle-menu" for="menu" onclick><i class="fa fa-bars"></i></label></div><input id="menu" type="checkbox"><div class="container nav-items"><a class="sidebar-nav-item active" href="/">主页</a><a class="sidebar-nav-item" href="/archives">分类归档</a><a class="sidebar-nav-item" href="/about">关于</a><a class="sidebar-nav-item" href="/links">收集</a></div></header><article class="wrapper"><div class="post-main"><div class="nav"><nav class="container"><!--each nav, name in theme.menu//+a_with_current(nav, __(name))--></nav><div class="container post-meta"><div class="post-tags"><a class="post-tag-link" href="/tags/Rust/">Rust</a></div><div class="post-time">2019-09-26</div></div></div><div class="container post-header"><h1>Rust基础学习-12-再聊一下String</h1></div><div class="container post-content"><p>之前我们已经使用过 <code>String</code>，对于 <code>String</code> 的解释是可增长的、可变的、有所有权的、UTF-8 编码的字符串类型。<code>String</code> 的数据是存在于堆上的。下面再看一些关于 <code>String</code> 的使用。</p>
+<p><strong>1. 创建字符串</strong></p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="comment">// 创建一个字符串</span></span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut</span> s1 = <span class="built_in">String</span>::new();</span><br><span class="line">    s1.push_str(<span class="string">"Hello"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut</span> s2 = <span class="built_in">String</span>::from(<span class="string">"Hello"</span>);</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut</span> s3 = <span class="string">"Hello"</span>.to_string();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>上面 s1，s2，s3分别创建了一个字符串，并填充内容 “Hello”，这三种方式都可以达到相同的目的。</p>
+</blockquote>
+<p><strong>2. 除上可以 <code>push_str</code> ，还可以 <code>push</code> 单个字符</strong></p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut</span> s1 = <span class="built_in">String</span>::new();</span><br><span class="line">    s1.push(<span class="string">'H'</span>);</span><br><span class="line">    s1.push(<span class="string">'e'</span>);</span><br><span class="line">    s1.push(<span class="string">'l'</span>);</span><br><span class="line">    s1.push(<span class="string">'l'</span>);</span><br><span class="line">    s1.push(<span class="string">'o'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>3.字符串的拼接</strong></p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> s1 = <span class="string">"Hello"</span>.to_string();</span><br><span class="line">    <span class="keyword">let</span> s2 = <span class="string">", Rust"</span>.to_string();</span><br><span class="line">    <span class="keyword">let</span> s3 = <span class="string">" Haha"</span>.to_string();</span><br><span class="line">    <span class="keyword">let</span> s4 = s1 + &amp;s2 + &amp;s3;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"s2: &#123;&#125;\ns3: &#123;&#125;\ns4: &#123;&#125;"</span>,  s2, s3, s4);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意，如果要使用 <code>+</code> 去拼接字符串，会先获得第一个变量的所有权，然后附加上后面变量的内容拷贝。上面的代码，s4 创建后，s1将不再有效。</p>
+</blockquote>
+<p><strong>4. 使用 <code>format!</code> 宏拼接字符串</strong></p>
+<p>在涉及到很多的字符串要拼接时，使用 <code>+</code> 就不那么方便，下面使用 <code>format!</code> 宏进行操作，就方便很多。</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> s1 = <span class="string">"Hello"</span>.to_string();</span><br><span class="line">    <span class="keyword">let</span> s2 = <span class="string">", Rust"</span>.to_string();</span><br><span class="line">    <span class="keyword">let</span> s3 = <span class="string">" Haha"</span>.to_string();</span><br><span class="line">    <span class="keyword">let</span> s4 = <span class="built_in">format!</span>(<span class="string">"&#123;&#125;-&#123;&#125;-&#123;&#125;"</span>, s1, s2, s3);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"s1: &#123;&#125;\ns2: &#123;&#125;\ns3: &#123;&#125;\ns4: &#123;&#125;"</span>, s1, s2, s3, s4);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>从上面可以看出，<code>format!</code> 宏在拼接字符串时，并不获取任何所有权</p>
+</blockquote>
+<p><strong>5. 获取字符串的长度</strong></p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> s1 = <span class="string">"Hello"</span>.to_string();</span><br><span class="line">    <span class="keyword">let</span> len = s1.len();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>6. 字符串的遍历</strong></p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> s1 = <span class="string">"Hello"</span>.to_string();</span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">char</span> <span class="keyword">in</span> s1.chars()&#123;</span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">"&#123;&#125;"</span>, <span class="built_in">char</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>String</code> 不支持以 <code>[0]</code> 这样的索引形式访问单个字符，具体原因请看后面关于 <code>String</code> 的详细内容连接。但是 <code>String</code> 可以用上面的形式遍历每一个字符。</p>
+</blockquote>
+<p><strong>7. 字符串原始字节遍历</strong></p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="keyword">for</span> b <span class="keyword">in</span> <span class="string">"नमस्ते"</span>.bytes() &#123;</span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">"&#123;&#125;"</span>, b);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="上面只是讨论-String-很基本的使用，但是-String-并不简单，里面还有很多很多内容，具体到里面的一些原理和实现，请阅读下面的连接"><a href="#上面只是讨论-String-很基本的使用，但是-String-并不简单，里面还有很多很多内容，具体到里面的一些原理和实现，请阅读下面的连接" class="headerlink" title="上面只是讨论 String 很基本的使用，但是 String 并不简单，里面还有很多很多内容，具体到里面的一些原理和实现，请阅读下面的连接"></a>上面只是讨论 <code>String</code> 很基本的使用，但是 <code>String</code> 并不简单，里面还有很多很多内容，具体到里面的一些原理和实现，请阅读下面的连接</h4><p>Rust 程序语言设计 <a href="https://kaisery.github.io/trpl-zh-cn/ch08-02-strings.html" target="_blank" rel="noopener">https://kaisery.github.io/trpl-zh-cn/ch08-02-strings.html</a></p>
+<p>String 官方文档 <a href="https://doc.rust-lang.org/std/string/struct.String.html" target="_blank" rel="noopener">https://doc.rust-lang.org/std/string/struct.String.html</a></p>
+</div></div><script type="text/x-mathjax-config">
+   MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    }); 
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><div class="post-main post-comment"><div id="disqus_thread"></div><script type="text/javascript">
+var disqus_shortname = 'sexy-game-boy';
+var disqus_identifier = '2019/09/26/Rust基础学习-12-再聊一下String/';
+var disqus_title = 'Rust基础学习-12-再聊一下String';
+var disqus_url = 'https://solleter.me/2019/09/26/Rust基础学习-12-再聊一下String/';
+(function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">Blog comments powered by <span class="logo-disqus">Disqus</span></a></div></article><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.css"><script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script><script src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script>$(document).ready(function() {
+  $(".fancybox").fancybox();
+});
+</script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+e.src='//www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+ga('create','UA-140200191-1');ga('send','pageview');</script></body></html>

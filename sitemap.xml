@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://solleter.me/2019/10/07/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E7%AC%94%E8%AE%B001/</loc>
+    
+    <lastmod>2019-10-07T14:25:05.510Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://solleter.me/2019/09/29/%E4%BD%BF%E7%94%A8%E5%A4%96%E9%83%A8%E5%B7%A5%E5%85%B7%E7%99%BB%E5%BD%95Google-VPS/</loc>
+    
+    <lastmod>2019-10-07T13:48:22.231Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://solleter.me/2019/09/26/Rust%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-13-HashMap%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%BA%94%E7%94%A8/</loc>
+    
+    <lastmod>2019-10-07T13:48:22.230Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://solleter.me/2019/09/26/Rust%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-12-%E5%86%8D%E8%81%8A%E4%B8%80%E4%B8%8BString/</loc>
+    
+    <lastmod>2019-10-07T13:48:22.230Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://solleter.me/2019/09/22/Rust%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-12-vector%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
     
     <lastmod>2019-09-22T09:54:45.576Z</lastmod>
@@ -114,14 +142,14 @@
   </url>
   
   <url>
-    <loc>https://solleter.me/2019/08/26/%E8%81%8A%E8%81%8A%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E9%80%BB%E8%BE%91%E5%B1%82%E6%A1%86%E6%9E%B6%E6%A8%A1%E5%9D%97/</loc>
+    <loc>https://solleter.me/2019/08/18/%E5%9C%A8%E6%B8%B8%E6%88%8F%E5%85%AC%E5%8F%B8%E5%B7%A5%E4%BD%9C-02-%E4%BA%BA%E5%91%98%E6%9E%B6%E6%9E%84/</loc>
     
     <lastmod>2019-09-01T01:21:07.225Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://solleter.me/2019/08/18/%E5%9C%A8%E6%B8%B8%E6%88%8F%E5%85%AC%E5%8F%B8%E5%B7%A5%E4%BD%9C-02-%E4%BA%BA%E5%91%98%E6%9E%B6%E6%9E%84/</loc>
+    <loc>https://solleter.me/2019/08/26/%E8%81%8A%E8%81%8A%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E9%80%BB%E8%BE%91%E5%B1%82%E6%A1%86%E6%9E%B6%E6%A8%A1%E5%9D%97/</loc>
     
     <lastmod>2019-09-01T01:21:07.225Z</lastmod>
     
