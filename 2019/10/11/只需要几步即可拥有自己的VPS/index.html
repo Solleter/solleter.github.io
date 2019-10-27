@@ -1,0 +1,69 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.9.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="日常记录"><title>只需要几步即可拥有自己的VPS | F社</title><link rel="stylesheet" type="text/css" href="/css/normalize.css"><link rel="stylesheet" type="text/css" href="/css/highlight.css"><link rel="stylesheet" type="text/css" href="/css/font.css"><link rel="stylesheet" type="text/css" href="/css/noise.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><header class="wrapper header"><div class="container blog-title"><a class="title" id="logo" href="/.">F社</a><span class="subtitle">上你娘的班</span><label id="toggle-menu" for="menu" onclick><i class="fa fa-bars"></i></label></div><input id="menu" type="checkbox"><div class="container nav-items"><a class="sidebar-nav-item active" href="/">主页</a><a class="sidebar-nav-item" href="/archives">分类归档</a><a class="sidebar-nav-item" href="/about">关于</a><a class="sidebar-nav-item" href="/links">收集</a></div></header><article class="wrapper"><div class="post-main"><div class="nav"><nav class="container"><!--each nav, name in theme.menu//+a_with_current(nav, __(name))--></nav><div class="container post-meta"><div class="post-tags"><a class="post-tag-link" href="/tags/Ubuntu/">Ubuntu</a></div><div class="post-time">2019-10-11</div></div></div><div class="container post-header"><h1>只需要几步即可拥有自己的VPS</h1></div><div class="container post-content"><p>这篇博客将一步一步教大家学习VPS的购买和配置教程，只需要简单几步，就可以拥有自己的VPS，然后愉快玩耍。可以自己搭一个科学上网代理服务器啦，托管自己的博客啦，等等。</p>
+<p>VPS服务商有很多种，这们我们选择相对比较稳定的 Vultr。</p>
+<p>Vultr的收费模式是按时间累计收费的，首先需要往自己帐号里充值。当创建一个实例后，则计费开始。例如选择的是5美元每月的服务器，也就是大概每小时0.007美元，如果你只用了10个小时就把VPS实例删了，那就只会消费掉0.07美元。</p>
+<h2 id="1-首先点击这里，打开-Vultr-官网"><a href="#1-首先点击这里，打开-Vultr-官网" class="headerlink" title="1. 首先点击这里，打开 Vultr 官网"></a>1. <a href="https://www.vultr.com/?ref=8288434" target="_blank" rel="noopener">首先点击这里，打开 Vultr 官网</a></h2><p>然后点击右上角的 <strong>Sign up</strong> 进入注册页面，然后输入邮箱和密码以及验证码，注册一个 Vultr 账户</p>
+<p><img src="https://i.loli.net/2019/10/11/b4DREmgiwqcKlXz.png" alt="1.png"></p>
+<h2 id="2-充值"><a href="#2-充值" class="headerlink" title="2. 充值"></a>2. 充值</h2><p>注册完后，会自动登录，并跳转到账单页面，因为现在账户里还没有金额，所以需要先充一点。刚开始，可以先充最小金额，也就是10美元，一般都会有金额赠送，现在有<strong>充10美元</strong>，会额外<strong>赠送50美元</strong>的活动，但是这50美元有试用期限。这个活动在写本文的时候还有，不知道什么时候结束。</p>
+<p>可以使用信用卡，支付宝，微信等方式支付，还是很方便的。</p>
+<p><img src="https://i.loli.net/2019/10/11/F4KUepQb6HhLs9E.png" alt="2.png"></p>
+<h2 id="3-创建-VPS-实例"><a href="#3-创建-VPS-实例" class="headerlink" title="3. 创建 VPS 实例"></a>3. 创建 VPS 实例</h2><ol>
+<li>第一张图，点击左边的<strong>Products</strong>，然后选择右边的 <strong>Cloud Compute</strong></li>
+<li>第二张图，选择VPS所属的机房，经过我的测试，感觉 <strong>Los Angeles</strong>(洛杉矶) 的相对来说比较稳定，所以这里就用洛杉矶机房的机器。</li>
+<li>第三张图，选择 <strong>操作系统</strong> 和  <strong>付费方案</strong>，操作系统这里试用 <strong>Ubuntu</strong>，版本使用 <strong>18.04</strong> 和 <strong>19.04</strong> 都可以。然后选择下面 <strong>$5/mo</strong> 的方案，然后点击 <strong>Deploy Now</strong> 就会开始创建VPS实例</li>
+<li>等待 <strong>Instaling</strong> 状态变为 <strong>Running</strong> 状态，则表示VPS已经创建好，正在运行中。</li>
+</ol>
+<p><img src="https://i.loli.net/2019/10/11/vQkus8GhSIPOjax.png" alt="3.png"></p>
+<p><img src="https://i.loli.net/2019/10/11/f3AYm7NK6FHjp4g.png" alt="4.png"></p>
+<p><img src="https://i.loli.net/2019/10/11/yMrb2mNugcazYTD.png" alt="5.png"></p>
+<p><img src="https://i.loli.net/2019/10/11/gfbaedNTDnzsWQi.png" alt="6.png"></p>
+<p><img src="https://i.loli.net/2019/10/11/5UqjNEIA3us7vpn.png" alt="7.png"></p>
+<h2 id="4-登录-VPS"><a href="#4-登录-VPS" class="headerlink" title="4. 登录 VPS"></a>4. 登录 VPS</h2><p>当 VPS实例变为 <strong>Running</strong> 状态后，点击左边的 <strong>Cloud Intance</strong>，即可进入当前实例的信息页面，如下图。接下来使用 <strong>SSH</strong> 登录VPS</p>
+<ol>
+<li>打开命令行，如果是Window，可以使用CMD，如果是Linux或者Mac，则使用对应的终端即可。</li>
+<li>复制IP，然后在命令行中输入命令 <code>ssh root@45.77.125.227</code>，这里的IP换成你的VPS实例IP。然后回车，因为是第一次登录，所以会询问是否确认连接，这里输入 <code>yes</code>，然后回车。</li>
+<li>接下来会要求输入密码，在当前实例信息页面，<strong>Password</strong> 后面就是密码，默认是隐藏的，可以点击那个 “眼睛” 的图标显示出来，也可以点击后面那个图标复制密码。</li>
+<li>复制密码后，在命令行中粘贴。如果你是在CMD中，只要聚焦在CMD窗口，按一下右键就可以粘贴上。注意，命令行中密码是不显示的。粘贴上后按回车，即可成功登录。</li>
+</ol>
+<p><img src="https://i.loli.net/2019/10/11/qEITmdhKzAVUMwy.png" alt="8.png"></p>
+<p><img src="https://i.loli.net/2019/10/11/zcsTPerik7KGujt.png" alt="9.png"></p>
+<h2 id="5-修改VPS密码"><a href="#5-修改VPS密码" class="headerlink" title="5. 修改VPS密码"></a>5. 修改VPS密码</h2><p>Vultr 的VPS实例默认生成的密码是随机的，不好记，所以我们在登录后，先去改个密码，改成自己容易记忆的密码。</p>
+<p>使用命令 <code>passwd root</code> 命令，回车，然后输入密码，再次输入密码，当看到 <strong>passwd: password updated successfully</strong> 的字样，则表示密码修改成功。下次登录时，就可以使用自己的密码登录了。</p>
+<p><img src="https://i.loli.net/2019/10/11/V9ml8se2DFaOREf.png" alt="10.png"></p>
+<p> 好了，VPS的购买及配置教程就结束了，只要跟着一步一步来，还是很简单的。如果有什么问题，欢迎在下面留言。</p>
+<p>VPS搭建好了，接下来就是使用VPS做一些事情，登录搭建个科学上网的梯子之类的，这将在后面的博客中介绍。</p>
+</div></div><script type="text/x-mathjax-config">
+   MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    }); 
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><div class="post-main post-comment"><div id="disqus_thread"></div><script type="text/javascript">
+var disqus_shortname = 'sexy-game-boy';
+var disqus_identifier = '2019/10/11/只需要几步即可拥有自己的VPS/';
+var disqus_title = '只需要几步即可拥有自己的VPS';
+var disqus_url = 'https://solleter.me/2019/10/11/只需要几步即可拥有自己的VPS/';
+(function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">Blog comments powered by <span class="logo-disqus">Disqus</span></a></div></article><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.css"><script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script><script src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script>$(document).ready(function() {
+  $(".fancybox").fancybox();
+});
+</script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+e.src='//www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+ga('create','UA-140200191-1');ga('send','pageview');</script></body></html>

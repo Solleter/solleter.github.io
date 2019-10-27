@@ -1,0 +1,42 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.9.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="日常记录"><title>游戏多语言实现思路 | F社</title><link rel="stylesheet" type="text/css" href="/css/normalize.css"><link rel="stylesheet" type="text/css" href="/css/highlight.css"><link rel="stylesheet" type="text/css" href="/css/font.css"><link rel="stylesheet" type="text/css" href="/css/noise.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><header class="wrapper header"><div class="container blog-title"><a class="title" id="logo" href="/.">F社</a><span class="subtitle">上你娘的班</span><label id="toggle-menu" for="menu" onclick><i class="fa fa-bars"></i></label></div><input id="menu" type="checkbox"><div class="container nav-items"><a class="sidebar-nav-item active" href="/">主页</a><a class="sidebar-nav-item" href="/archives">分类归档</a><a class="sidebar-nav-item" href="/about">关于</a><a class="sidebar-nav-item" href="/links">收集</a></div></header><article class="wrapper"><div class="post-main"><div class="nav"><nav class="container"><!--each nav, name in theme.menu//+a_with_current(nav, __(name))--></nav><div class="container post-meta"><div class="post-tags"><a class="post-tag-link" href="/tags/游戏开发/">游戏开发</a></div><div class="post-time">2019-10-08</div></div></div><div class="container post-header"><h1>游戏多语言实现思路</h1></div><div class="container post-content"><p>游戏多语言是指界面或者游戏中的文本根据不同的语言设置，显示不同的语言文本。</p>
+<p>这里要说的思路是通过配置表的形式，来做多语言逻辑。首先，需要建立一个表，第一列为ID，值可以随便定义，只要保证唯一就可以。第二列为中文，第三列为英文，如果有其他的语言需求，只要加列就可以。</p>
+<p><img src="https://i.loli.net/2019/10/08/wGacy8rM15IhZvg.png" width="100%" align="center"></p>
+<p>写一个多语言数据管理的类，游戏运行时，将多语言表加载，并存到字典中。在游戏中，所有用到多语言的地方，都要通过ID去获取对应的文本，在获取函数中，通过判断当前设置的语言，返回对应语言的文本。例如，要获取 <strong>”新游戏“</strong> 这个按钮的文本，如果当前设置中设置的是日语，则会返回 <strong>”新しいゲーム“</strong>。</p>
+<p>多语言表，可以由策划去维护，不同策划负责不同模块，由他们将自己负责的模块中要用到的多语言配置在表中，然后将对应的ID告诉程序，由程序将ID硬编码在逻辑中。ID一旦确定，则不能修改。</p>
+<p>UI模块，如果要动态刷新，可以通过事件的形式，当玩家在设置模块中修改了语言，则广播出一个事件去，所有UI监听这个事件，当收到这个事件时，就重新获取一遍多语言文本，然后刷新UI。</p>
+</div></div><script type="text/x-mathjax-config">
+   MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    }); 
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><div class="post-main post-comment"><div id="disqus_thread"></div><script type="text/javascript">
+var disqus_shortname = 'sexy-game-boy';
+var disqus_identifier = '2019/10/08/游戏多语言实现实路/';
+var disqus_title = '游戏多语言实现思路';
+var disqus_url = 'https://solleter.me/2019/10/08/游戏多语言实现实路/';
+(function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">Blog comments powered by <span class="logo-disqus">Disqus</span></a></div></article><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.css"><script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script><script src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script>$(document).ready(function() {
+  $(".fancybox").fancybox();
+});
+</script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+e.src='//www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+ga('create','UA-140200191-1');ga('send','pageview');</script></body></html>

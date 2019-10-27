@@ -1,0 +1,101 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.9.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="日常记录"><title>图形学笔记-01-导论 | F社</title><link rel="stylesheet" type="text/css" href="/css/normalize.css"><link rel="stylesheet" type="text/css" href="/css/highlight.css"><link rel="stylesheet" type="text/css" href="/css/font.css"><link rel="stylesheet" type="text/css" href="/css/noise.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><header class="wrapper header"><div class="container blog-title"><a class="title" id="logo" href="/.">F社</a><span class="subtitle">上你娘的班</span><label id="toggle-menu" for="menu" onclick><i class="fa fa-bars"></i></label></div><input id="menu" type="checkbox"><div class="container nav-items"><a class="sidebar-nav-item active" href="/">主页</a><a class="sidebar-nav-item" href="/archives">分类归档</a><a class="sidebar-nav-item" href="/about">关于</a><a class="sidebar-nav-item" href="/links">收集</a></div></header><article class="wrapper"><div class="post-main"><div class="nav"><nav class="container"><!--each nav, name in theme.menu//+a_with_current(nav, __(name))--></nav><div class="container post-meta"><div class="post-tags"><a class="post-tag-link" href="/tags/图形学/">图形学</a></div><div class="post-time">2019-10-27</div></div></div><div class="container post-header"><h1>图形学笔记-01-导论</h1></div><div class="container post-content"><blockquote>
+<p>Fundamentals of Computer Graphics, 4th Edition 这本书从算法和数学方面，介绍计算机图形学。而计算机图形学在很多领域都有相关应用，例如游戏开发，大量地使用计算机图形学，用于渲染各种漂亮的效果。</p>
+<p>计算机硬件发展很快，而图形学涉及到各种不同硬件平台的API。但是这本书，将尽量不依赖于特定的API，从基本原理上，去介绍图形学相关的知识。</p>
+</blockquote>
+<h2 id="1-主要应用"><a href="#1-主要应用" class="headerlink" title="1. 主要应用"></a>1. 主要应用</h2><ul>
+<li>游戏</li>
+<li>动漫</li>
+<li>视觉特效</li>
+<li>动画电影</li>
+<li>CAD/CAM</li>
+<li>模拟仿真</li>
+<li>医学影像</li>
+<li>信息可视化</li>
+</ul>
+<h2 id="2-图形API"><a href="#2-图形API" class="headerlink" title="2. 图形API"></a>2. 图形API</h2><ul>
+<li>Toolkits</li>
+<li>Direct3D/OpenGL</li>
+</ul>
+<h2 id="3-图形流水线"><a href="#3-图形流水线" class="headerlink" title="3. 图形流水线"></a>3. 图形流水线</h2><ul>
+<li>现在的计算机，拥有很强大的3D图形流水线。这个子系统用于高效的绘制3D图元。这些子系统对于处理3D三角形和共享顶点进行了深度优化。在这个流水线中最基本的操作是将3D顶点的位置，转换成2D屏幕坐标，然后绘制在屏幕上。</li>
+<li>对于绘制三角形的顺序，现在几乎总是使用Z缓冲技术来解决。</li>
+<li>能图形流水线中的几可操作，可以以四维坐标空间来实现。而四维坐标空间，使用4x4的矩阵来描述。</li>
+<li>LOD可以用于优化效率，当模型距离较远时，可以通过减少三角形来提高渲染效率，而较近时，则使用高精度的模型。</li>
+</ul>
+<h2 id="4-数值问题"><a href="#4-数值问题" class="headerlink" title="4. 数值问题"></a>4. 数值问题</h2><p>IEEE Standards Association, 1985</p>
+<p>三个重要的值</p>
+<ul>
+<li>Infinity (∞)</li>
+<li>Minus infinity (−∞)</li>
+<li>Not a number (NaN)</li>
+</ul>
+<h2 id="5-效率"><a href="#5-效率" class="headerlink" title="5. 效率"></a>5. 效率</h2><p>没有什么魔法规则能让代码更有效率。涉及到效率问题时，要仔细去权衡。</p>
+<ul>
+<li>注意内存访问模式</li>
+<li>写清晰简单的代码</li>
+<li>使用Optimized模式编译代码</li>
+<li>使用分析工具找到瓶颈</li>
+<li>检查数据结构</li>
+<li>!!! 对于现代CPU来说，使用<code>整型</code>代替<code>浮点型</code>已经不能带来什么效率提升。</li>
+</ul>
+<h2 id="6-基本的数据结构"><a href="#6-基本的数据结构" class="headerlink" title="6. 基本的数据结构"></a>6. 基本的数据结构</h2><ul>
+<li><p>Vector2</p>
+<p>通常用于存储 x, y 值</p>
+</li>
+<li><p>Vector3</p>
+<p>通常用于存储 x, y, z 值</p>
+</li>
+<li><p>Hvector</p>
+<p>用于存储 x, y, z, w 值</p>
+</li>
+<li><p>Transform</p>
+<p>用于存储 4x4 矩阵，用于表示转换</p>
+</li>
+<li><p>RGB</p>
+<p>用于存储 红, 绿, 蓝 三色的值</p>
+</li>
+<li><p>Image</p>
+<p>RGB颜色值的二维数组，通常用于存储输出的图像</p>
+</li>
+</ul>
+<h2 id="7-调试图形程序"><a href="#7-调试图形程序" class="headerlink" title="7. 调试图形程序"></a>7. 调试图形程序</h2><p>没有什么具体的标准</p>
+<ul>
+<li>输出看看</li>
+<li>使用断点</li>
+</ul>
+</div></div><script type="text/x-mathjax-config">
+   MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    }); 
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><div class="post-main post-comment"><div id="disqus_thread"></div><script type="text/javascript">
+var disqus_shortname = 'sexy-game-boy';
+var disqus_identifier = '2019/10/27/图形学笔记-01-导论/';
+var disqus_title = '图形学笔记-01-导论';
+var disqus_url = 'https://solleter.me/2019/10/27/图形学笔记-01-导论/';
+(function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">Blog comments powered by <span class="logo-disqus">Disqus</span></a></div></article><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.css"><script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script><script src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script>$(document).ready(function() {
+  $(".fancybox").fancybox();
+});
+</script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+e.src='//www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+ga('create','UA-140200191-1');ga('send','pageview');</script></body></html>
